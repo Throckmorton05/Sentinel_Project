@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Approved extensions · Sentinel</title>
+    <script src="theme.js"></script>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="catalog.js" defer></script>
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="brand" href="newtab.html"
+        ><span class="brand-shield" aria-hidden="true"></span>Sentinel</a
+      ><a class="nav-link" href="newtab.html"
+        >New Tab <span aria-hidden="true">↗</span></a
+      >
+    </header>
+    <main class="catalog-shell">
+      <h1>Approved extensions</h1>
+      <p id="guardian-note" class="guardian-note" hidden>
+        Adding extensions requires your Guardian PIN.
+      </p>
+      <p
+        id="approval-message"
+        class="approval-message"
+        role="status"
+        aria-live="polite"
+      ></p>
+      <div class="catalog-controls">
+        <label class="catalog-search"
+          ><span aria-hidden="true">⌕</span
+          ><span class="sr-only">Search approved extensions</span
+          ><input
+            id="search"
+            type="search"
+            placeholder="Search extensions"
+            autocomplete="off" /></label
+        ><button id="reload" class="quiet-button" type="button">Refresh</button>
+      </div>
+      <nav
+        id="categories"
+        class="categories"
+        aria-label="Extension categories"
+      ></nav>
+      <p
+        id="catalog-status"
+        class="catalog-status"
+        role="status"
+        aria-live="polite"
+      >
+        Loading approved extensions…
+      </p>
+      <section
+        id="extensions"
+        class="extension-grid"
+        aria-label="Optional approved extensions"
+      ></section>
+      <section id="included-section" class="included-section" hidden>
+        <div class="section-heading">
+          <h2>Included with Sentinel</h2>
+          <p>
+            Installed automatically. Filtering follows your Sentinel settings.
+          </p>
+        </div>
+        <div id="required" class="required-grid"></div>
+      </section>
+      <p class="catalog-footnote">
+        Store links open the official Chrome Web Store. You choose which
+        optional extensions to install.
+      </p>
+    </main>
+    <dialog id="guardian-dialog" aria-labelledby="guardian-title">
+      <form id="guardian-form">
+        <h2 id="guardian-title">Guardian approval</h2>
+        <p id="guardian-description"></p>
+        <label for="guardian-pin">Guardian PIN</label>
+        <input
+          id="guardian-pin"
+          type="password"
+          inputmode="numeric"
+          autocomplete="off"
+          maxlength="32"
+          required
+        />
+        <p id="guardian-error" class="dialog-error" role="alert"></p>
+        <div class="dialog-actions">
+          <button id="guardian-cancel" class="quiet-button" type="button">
+            Cancel
+          </button>
+          <button id="guardian-submit" class="store-button" type="submit">
+            Approve and add
+          </button>
+        </div>
+      </form>
+    </dialog>
+  </body>
+</html>

@@ -1,0 +1,2 @@
+#This is the users allowlist this will allow websites that are blocked by default settings
+

@@ -1,0 +1,3 @@
+# Custom Sentinel DNS blocklist
+
+

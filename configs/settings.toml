@@ -1,0 +1,21 @@
+image_filtering = true
+boot_media_protection = false
+vm_protection = false
+#Sentinel System Settings:
+#
+safe_installs = false
+
+safe_browsing = true
+
+safe_steam = true
+
+safe_crunchyroll = true
+
+[dns]
+enabled = true
+adult = true
+adult_heavy_sites = true
+unsafe_search_engines = true
+gambling = true
+social_media = true
+browsers_sans_safe_search = true

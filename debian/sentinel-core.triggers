@@ -1,0 +1,6 @@
+interest-noawait /usr/share/sentinel/models
+interest-noawait /usr/share/sentinel/extensions
+interest-noawait /usr/share/sentinel/approved_apps.toml
+interest-noawait /usr/share/sentinel/browser
+interest-noawait /usr/share/kwin/scripts/sentinel-window-bridge
+interest-noawait /usr/bin/python3.14

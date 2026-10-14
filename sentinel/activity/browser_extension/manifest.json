@@ -1,0 +1,19 @@
+{
+  "manifest_version": 3,
+  "name": "Sentinel Activity",
+  "version": "0.2.0",
+  "description": "Weekly screen-time breakdown, supported searches and explicit blocked searches for Sentinel.",
+  "permissions": [
+    "webNavigation",
+    "alarms",
+    "storage",
+    "tabs",
+    "idle"
+  ],
+  "host_permissions": [
+    "http://127.0.0.1:8765/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  }
+}

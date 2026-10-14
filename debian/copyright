@@ -1,0 +1,47 @@
+Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Upstream-Name: Sentinel
+Source: https://github.com/Throckmorton05/Sentinel_Project
+
+Files: *
+Copyright: 2026 Sentinel contributors
+License: GPL-3.0-only
+Comment:
+ Applies to Sentinel's original work except files/components carrying separate
+ terms. See NOTICE.md and THIRD_PARTY.md; third-party notices are preserved.
+
+Files: sentinel/wayland/kwin_script/*
+Copyright: Sentinel Project
+License: GPL-3.0
+ Declared in the KWin script's metadata.json.
+ On Debian systems the license is in /usr/share/common-licenses/GPL-3.
+
+Files: sentinel/dns/data/social_media.txt sentinel/dns/data/LICENSE-hagezi.txt
+Copyright: HaGeZi and upstream contributors
+License: GPL-3.0
+ The complete license is supplied with the data.
+
+Files: sentinel/image_blocking/models/* packaging/models/*
+Copyright: See THIRD_PARTY.md and the upstream model metadata
+License: model-specific
+ OpenNSFW2: MIT. Hentai ViT: CC0-1.0. Drawn/photo classifier:
+ upstream identifies OpenRAIL but does not specify the variant or license text.
+ See /usr/share/doc/sentinel-models/THIRD_PARTY.md and licenses/.
+
+Files: usr/lib/sentinel/venv/*
+Copyright: The respective Python dependency authors
+License: dependency-specific
+ Runtime packages are resolved from poetry.lock. Their supplied license files
+ and metadata are retained in the protected environment's dist-info directories.
+ The wheelhouse and lock export are retained alongside the build artifacts.
+
+License: GPL-3.0-only
+ Sentinel is free software: you may redistribute it and/or modify it under
+ the terms of version 3 of the GNU General Public License as published by
+ the Free Software Foundation.
+ .
+ Sentinel is distributed in the hope that it will be useful, but WITHOUT ANY
+ WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+ FOR A PARTICULAR PURPOSE. See the GNU General Public License for details.
+ .
+ The complete license text is included in the source LICENSE file and is
+ available on Debian systems in /usr/share/common-licenses/GPL-3.

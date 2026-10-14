@@ -1,0 +1,8 @@
+{
+  "url": "https://github.com/Throckmorton05/Sentinel_Project/releases/download/apt-beta",
+  "fingerprint": "2783D1901D7826F83606DB5FF2225F1D294489F7",
+  "layout": "github-flat",
+  "suite": "./",
+  "github_repo": "Throckmorton05/Sentinel_Project",
+  "github_tag": "apt-beta"
+}

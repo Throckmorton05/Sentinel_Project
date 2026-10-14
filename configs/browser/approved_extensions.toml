@@ -1,0 +1,123 @@
+schema_version = 1
+
+# The authoritative optional extension inventory. Install as root-owned data at
+# /usr/share/sentinel/browser/approved_extensions.toml. Changes are picked up by
+# sentineld's existing browser-policy reconciliation. No extension can edit it.
+# Optional extensions approved for the Sentinel catalog.
+
+[[extensions]]
+id = "aghfnjkcakhmadgdomlmlhhaocbkloab"
+name = "Just Black"
+developer = "Google"
+category = "Appearance"
+description = "A simple black theme for Chrome's tabs and toolbar."
+permissions_note = "Changes the browser's appearance."
+store_url = "https://chromewebstore.google.com/detail/just-black/aghfnjkcakhmadgdomlmlhhaocbkloab"
+
+[[extensions]]
+id = "oldceeleldhonbafppcapldpdifcinji"
+name = "LanguageTool"
+developer = "LanguageTool"
+category = "Writing"
+description = "Checks grammar, spelling and writing style in multiple languages."
+permissions_note = "Online checking processes the text you submit."
+store_url = "https://chromewebstore.google.com/detail/ai-grammar-checker-paraph/oldceeleldhonbafppcapldpdifcinji"
+
+[[extensions]]
+id = "kbfnbcaeplbcioakkpcpgfkobkghlhen"
+name = "Grammarly"
+developer = "Grammarly"
+category = "Writing"
+description = "Helps with grammar, clarity and writing suggestions in browser text fields."
+permissions_note = "Writing assistance can send text to Grammarly."
+store_url = "https://chromewebstore.google.com/detail/grammarly-ai-writing-assi/kbfnbcaeplbcioakkpcpgfkobkghlhen"
+
+[[extensions]]
+id = "cofdbpoegempjloogbagkncekinflcnj"
+name = "DeepL"
+developer = "DeepL"
+category = "Languages"
+description = "Translates selected text and helps you write in other languages."
+permissions_note = "Translation and writing features process submitted text online."
+store_url = "https://chromewebstore.google.com/detail/deepl-translate-and-write/cofdbpoegempjloogbagkncekinflcnj"
+
+[[extensions]]
+id = "odpdkefpnfejbfnmdilmfhephfffmfoh"
+name = "Readlang"
+developer = "Readlang"
+category = "Languages"
+description = "Translates words and phrases while reading and creates vocabulary flashcards."
+permissions_note = "Uses selected webpage text for translation and vocabulary features."
+store_url = "https://chromewebstore.google.com/detail/readlang-web-reader/odpdkefpnfejbfnmdilmfhephfffmfoh"
+
+[[extensions]]
+id = "ddkjiahejlhfcafbddmgiahcphecmpfh"
+name = "uBlock Origin Lite"
+developer = "Raymond Hill"
+category = "Privacy"
+description = "Blocks ads and trackers with Manifest V3-compatible filtering."
+permissions_note = "Filters network requests; review site-access choices in its settings."
+store_url = "https://chromewebstore.google.com/detail/ublock-origin-lite/ddkjiahejlhfcafbddmgiahcphecmpfh"
+
+[[extensions]]
+id = "khncfooichmfjbepaaaebmommgaepoid"
+name = "Unhook"
+developer = "Unhook"
+category = "Focus"
+description = "Hides YouTube recommendations, Shorts and other distracting page sections."
+permissions_note = "Reads and changes YouTube pages to hide selected sections."
+store_url = "https://chromewebstore.google.com/detail/unhook-remove-youtube-rec/khncfooichmfjbepaaaebmommgaepoid"
+
+[[extensions]]
+id = "mnjggcdmjocbbbhaepdhchncahnbgone"
+name = "SponsorBlock"
+developer = "Ajay"
+category = "Focus"
+description = "Skips community-marked sponsorships and other optional segments on YouTube."
+permissions_note = "Queries community segment data using video identifiers."
+store_url = "https://chromewebstore.google.com/detail/sponsorblock-for-youtube/mnjggcdmjocbbbhaepdhchncahnbgone"
+
+[[extensions]]
+id = "eimadpbcbfnmbkopoojfekhnkhdbieeh"
+name = "Dark Reader"
+developer = "Dark Reader Ltd"
+category = "Appearance"
+description = "Adjusts website colors, contrast and brightness for comfortable reading."
+permissions_note = "Reads and changes webpage styling on enabled sites."
+store_url = "https://chromewebstore.google.com/detail/dark-reader/eimadpbcbfnmbkopoojfekhnkhdbieeh"
+
+[[extensions]]
+id = "hdhinadidafjejdhmfkjgnolgimiaplp"
+name = "Read Aloud"
+developer = "Read Aloud"
+category = "Accessibility"
+description = "Reads webpage text aloud with selectable voices."
+permissions_note = "Reads webpage text; some voice providers process text online."
+store_url = "https://chromewebstore.google.com/detail/read-aloud-a-text-to-spee/hdhinadidafjejdhmfkjgnolgimiaplp"
+
+[[extensions]]
+id = "nngceckbapebfimnlniiiahkandclblb"
+name = "Bitwarden"
+developer = "Bitwarden Inc."
+category = "Privacy"
+description = "Stores passwords and passkeys and fills login forms from your vault."
+permissions_note = "Works with login fields and sensitive vault information."
+store_url = "https://chromewebstore.google.com/detail/bitwarden-password-manage/nngceckbapebfimnlniiiahkandclblb"
+
+[[extensions]]
+id = "mgngbgbhliflggkamjnpdmegbkidiapm"
+name = "Remove YouTube Shorts"
+developer = "blockscroll.app"
+category = "Focus"
+description = "Removes YouTube Shorts from feeds, recommendations and search results."
+permissions_note = "Reads and changes YouTube pages to remove Shorts."
+store_url = "https://chromewebstore.google.com/detail/remove-youtube-shorts/mgngbgbhliflggkamjnpdmegbkidiapm"
+
+[[extensions]]
+id = "hoombieeljmmljlkjmnheibnpciblicm"
+name = "Language Reactor"
+developer = "Dioco"
+category = "Languages"
+description = "Adds language-learning tools and dual subtitles for supported Netflix and YouTube videos."
+permissions_note = "Works with supported video pages and their subtitle content."
+store_url = "https://chromewebstore.google.com/detail/language-reactor/hoombieeljmmljlkjmnheibnpciblicm"

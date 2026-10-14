@@ -1,0 +1,15 @@
+[Unit]
+Description=Sentinel single graphical session guard
+ConditionPathExists=/etc/sentinel/iso-installed.json
+Wants=sentinel-first-boot.service sentineld.service
+After=sentinel-first-boot.service sentineld.service systemd-logind.service
+Before=sddm.service
+
+[Service]
+Type=simple
+ExecStart=/usr/lib/sentinel-iso/session_guard
+Restart=always
+RestartSec=2
+
+[Install]
+WantedBy=multi-user.target

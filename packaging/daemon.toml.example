@@ -1,0 +1,3 @@
+# Install as /etc/sentinel/daemon.toml, owned by root and mode 0644.
+# Replace this value with the one desktop account protected by Sentinel.
+protected_user = "your-desktop-user"

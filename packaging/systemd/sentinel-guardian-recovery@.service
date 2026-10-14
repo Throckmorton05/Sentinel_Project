@@ -1,0 +1,17 @@
+[Unit]
+Description=Sentinel Guardian App Access recovery request
+
+[Service]
+Type=exec
+User=root
+Group=root
+ExecStart=/usr/lib/sentinel/venv/bin/python -I -B -m sentinel.guardian_apps.recovery
+StandardInput=socket
+StandardOutput=socket
+StandardError=journal
+RuntimeMaxSec=30
+UMask=0077
+NoNewPrivileges=yes
+PrivateTmp=yes
+ProtectSystem=strict
+ReadWritePaths=/etc/sentinel /var/lib/sentinel/guardian-desktop /usr/local/share/applications /etc/xdg /run/sentinel

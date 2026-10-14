@@ -1,0 +1,18 @@
+{
+    "KPlugin": {
+        "Name": "Sentinel Window Bridge",
+        "Description": "Provides Wayland window information to Sentinel through KWin",
+        "Icon": "security-high",
+        "Authors": [
+            {
+                "Name": "Sentinel Project"
+            }
+        ],
+        "Id": "sentinel-window-bridge",
+        "Version": "0.1.0",
+        "License": "GPL-3.0"
+    },
+    "X-Plasma-API": "javascript",
+    "X-Plasma-MainScript": "code/main.js",
+    "KPackageStructure": "KWin/Script"
+}

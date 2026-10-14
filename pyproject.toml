@@ -1,0 +1,117 @@
+[project]
+name = "sen"
+version = "0.1.0"
+description = ""
+authors = [
+    {name = "Sentinel contributors"}
+]
+readme = "README.md"
+license = "GPL-3.0-only"
+license-files = [
+    "LICENSE",
+    "NOTICE.md",
+    "THIRD_PARTY.md",
+    "licenses/*.txt",
+    "sentinel/dns/data/LICENSE-hagezi.txt",
+]
+
+
+requires-python = ">=3.14,!=3.14.1,<3.15"
+
+dependencies = [
+    "typer (>=0.25.1,<0.26.0)",
+    "rich (>=15.0.0,<16.0.0)",
+    "pyqt6 (>=6.11.0,<7.0.0)",
+    "requests (>=2.34.2,<3.0.0)",
+    "psutil (>=7.2.2,<8.0.0)",
+    "fastapi (>=0.137.1,<0.138.0)",
+    "uvicorn (>=0.49.0,<0.50.0)",
+    "python-multipart (>=0.0.32,<0.0.33)",
+    "pillow (>=12.2.0,<13.0.0)",
+    "blake3 (>=1.0.9,<2.0.0)",
+    "nudenet (>=3.4.2,<4.0.0)",
+    "onnxruntime (>=1.27.0,<2.0.0)",
+    "python-pam (>=2.1.0,<3.0.0)",
+    "numpy (>=2.5.0,<3.0.0)",
+    "scikit-image (>=0.26.0,<0.27.0)",
+    "dbus-next (>=0.2.3,<0.3.0)",
+    "tomli-w (>=1.2.0,<2.0.0)",
+]
+
+
+[build-system]
+requires = ["poetry-core>=2.2.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+
+[tool.poetry]
+packages = [
+    { include = "sen" },
+    { include = "sentinel" },
+]
+
+exclude = [
+    "sentinel/**/browser_distribution/**/*.pem",
+    "sentinel/**/browser_distribution/**/*.key",
+    "sentinel/dns/cache/**",
+
+    "sentinel/image_blocking/models/**",
+
+    "sentinel/appstore/assets/**",
+
+    "sentinel/safe_steam/browser_extension/**",
+
+    "sentinel/activity/browser_distribution/**",
+    "sentinel/activity/browser_extension/**",
+    "sentinel/safe_crunchyroll/browser_distribution/**",
+    "sentinel/safe_crunchyroll/browser_extension/**",
+    "sentinel/extension_catalog/browser_distribution/**",
+    "sentinel/extension_catalog/browser_extension/**",
+    "sentinel/newtab/browser_distribution/**",
+    "sentinel/newtab/browser_extension/**",
+
+    "sentinel/**/tests/**",
+
+    "sentinel/**/README.md",
+]
+
+
+[[tool.poetry.include]]
+path = "sentinel/portal/assets/Sentinel_Shield.svg"
+format = ["sdist", "wheel"]
+
+[[tool.poetry.include]]
+path = "sentinel/image_blocking/screen_blocker/screen_time_blocker.qml"
+format = ["sdist", "wheel"]
+
+[[tool.poetry.include]]
+path = "sentinel/dns/data/social_media.txt"
+format = ["sdist", "wheel"]
+
+[[tool.poetry.include]]
+path = "sentinel/dns/data/LICENSE-hagezi.txt"
+format = ["sdist", "wheel"]
+
+[dependency-groups]
+dev = [
+    "pytest (>=9.1.1,<10.0.0)"
+]
+
+[project.scripts]
+
+sentineld = "sentinel.daemon.server:main"
+
+sen = "sen.cli.sen:app"
+
+sentinel-appstore = "sentinel.appstore.main:main"
+sentinel-portal = "sentinel.portal.main:main"
+
+sentinel-screen-monitor = "sentinel.image_blocking.screen_monitor.monitor:main"
+
+sentinel-safe-steam-watchdog = "sentinel.safe_steam.watchdog:main"
+
+sentinel-safe-steam-provision = "sentinel.safe_steam.provision:provision"
+
+sentinel-browser-policy-sync = "sentinel.browser_policies.sync:sync_policies"
+
+sentinel-auto-update = "sen.updates.auto_update:run_scheduled_update"

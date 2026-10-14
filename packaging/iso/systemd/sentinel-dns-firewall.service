@@ -1,0 +1,17 @@
+[Unit]
+Description=Sentinel local DNS transport enforcement
+ConditionPathExists=/etc/sentinel/iso-installed.json
+DefaultDependencies=no
+After=local-fs.target nftables.service
+Before=network-pre.target NetworkManager.service sentinel-dns.service shutdown.target
+Conflicts=shutdown.target
+Wants=network-pre.target
+
+[Service]
+Type=oneshot
+ExecStart=/bin/sh /usr/lib/sentinel-iso/load_firewall.sh
+RemainAfterExit=yes
+# No ExecStop: transport restrictions remain even if a service stops.
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,18 @@
+# New ISO installations start Unlocked. Enable protections in Sentinel Portal.
+# Copied only while building an unprovisioned image, never by update/boot hooks.
+image_filtering = false
+boot_media_protection = false
+vm_protection = false
+safe_installs = false
+safe_browsing = false
+safe_steam = false
+safe_crunchyroll = false
+
+[dns]
+enabled = false
+adult = false
+adult_heavy_sites = false
+unsafe_search_engines = false
+gambling = false
+social_media = false
+browsers_sans_safe_search = false

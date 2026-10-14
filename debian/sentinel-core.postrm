@@ -1,0 +1,8 @@
+#!/bin/sh
+set -e
+# Only purge deletes user state. Never run this branch on upgrade or remove.
+if [ "$1" = purge ]; then
+    rm -rf /etc/sentinel /var/lib/sentinel /var/cache/sentinel /var/log/sentinel
+fi
+#DEBHELPER#
+exit 0

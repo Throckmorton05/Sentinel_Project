@@ -1,0 +1,20 @@
+[Unit]
+Description=Sentinel Hentai Image Classification API
+After=network.target
+
+[Service]
+Type=simple
+
+User=sentinel
+Group=sentinel
+
+Environment=PYTHONUNBUFFERED=1
+Environment=HOME=/var/lib/sentinel/image-filter
+
+ExecStart=/usr/lib/sentinel/venv/bin/uvicorn sentinel.image_blocking.screen_filter.APIs.hentai_api:app --host 127.0.0.1 --port 8002
+
+Restart=on-failure
+RestartSec=3
+
+[Install]
+WantedBy=multi-user.target

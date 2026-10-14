@@ -1,0 +1,21 @@
+[Unit]
+Description=Sentinel Protected System Daemon
+After=local-fs.target systemd-logind.service
+Before=display-manager.service
+
+[Service]
+Type=simple
+User=root
+Group=root
+WorkingDirectory=/
+Environment=PYTHONUNBUFFERED=1
+Environment=PYTHONDONTWRITEBYTECODE=1
+ExecStart=/usr/lib/sentinel/venv/bin/sentineld
+Restart=always
+RestartSec=2
+TimeoutStopSec=15
+KillMode=control-group
+NoNewPrivileges=yes
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="260" viewBox="0 0 640 260">
+<rect width="640" height="260" rx="18" fill="#172338"/>
+<svg xmlns="http://www.w3.org/2000/svg" x="246" y="12" width="148" height="148" viewBox="263 119 274 261" fill="none" aria-hidden="true">
+  <!-- Monochrome alpha artwork: CSS masks supply the color per theme. -->
+  <path d="M399.856 135.963 C399.856 135.963 474.066 180.398 519.723 168.164 C528.743 319.463 402.357 364.037 402.357 364.037 C402.357 364.037 274.471 320.463 279.991 168.164 C326.307 180.574 399.856 135.963 399.856 135.963 Z" stroke="white" stroke-width="7" stroke-linejoin="round"/>
+  <path d="m 399.99971,177.1127 c 0,0 -6.0706,19.14547 -7.76369,34.25327 a 117.25082,31.657305 0 0 1 -107.53246,-25.83228 117.25082,51.184242 0 0 0 107.78997,41.77283 c 1.97564,14.72524 7.50618,32.16811 7.50618,32.16811 0,0 5.2598,-18.42345 7.35289,-32.16328 a 117.25082,51.184242 0 0 0 107.94383,-41.77766 117.25082,31.657305 0 0 1 -107.64562,25.83436 c -1.83306,-13.87587 -7.6511,-34.25535 -7.6511,-34.25535 z" stroke="white" stroke-width="7" stroke-linecap="round" stroke-linejoin="round" fill="white"/>
+</svg>
+
+<text x="320" y="205" text-anchor="middle" font-family="sans-serif" font-size="32" font-weight="bold" fill="#78c8ff">Sentinel Linux</text>
+<text x="320" y="239" text-anchor="middle" font-family="sans-serif" font-size="16" fill="#a6bbd5">0.1.0 Beta · Choose your protections</text>
+</svg>

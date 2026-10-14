@@ -1,0 +1,15 @@
+#!/bin/sh
+set -e
+case "$1" in
+    configure)
+        /usr/bin/python3.14 -I -B /usr/lib/sentinel/package_lifecycle.py configure
+        ;;
+    triggered)
+        /usr/bin/python3.14 -I -B /usr/lib/sentinel/package_lifecycle.py schedule-restart
+        ;;
+esac
+#DEBHELPER#
+if [ "$1" = configure ]; then
+    /usr/bin/python3.14 -I -B /usr/lib/sentinel/package_lifecycle.py schedule-restart
+fi
+exit 0

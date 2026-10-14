@@ -1,0 +1,10 @@
+# This private, hash-locked wheel runtime intentionally retains upstream wheels'
+# bundled codec/font libraries, with their license metadata. Dependency updates
+# require refreshing poetry.lock and rebuilding Sentinel; system library updates
+# alone do not update those copies. Original wheels remain in the build output.
+sentinel-core: embedded-library * [usr/lib/sentinel/venv/lib/python3.14/site-packages/*]
+
+# A distinct copy of distro Python is required for KWin ScreenShot2 executable
+# authorization. Its embedded Expat comes from the versioned python3.14 package;
+# the package trigger refreshes this copy whenever that interpreter changes.
+sentinel-core: embedded-library expat [usr/lib/sentinel/venv/bin/sentinel-screen-monitor-python]

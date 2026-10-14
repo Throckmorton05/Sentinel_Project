@@ -1,0 +1,75 @@
+sentinel (0.1.0-10) resolute; urgency=medium
+
+  * Add PIN-protected Sentinel-only Debian updates and Portal maintenance controls.
+  * Remove stock software/wallpapers from new images and keep one editable profile.
+  * Brand the live Try/Install screen and space a glowing blue Plymouth shield.
+  * Remove the terminal's Fastfetch theme row.
+
+ -- Sentinel Project <noreply@sentinel.invalid>  Tue, 13 Oct 2026 22:00:00 +0000
+
+sentinel (0.1.0-9) resolute; urgency=medium
+
+  * Extend the adult-heavy website category with art commission marketplaces.
+  * Ship an offline getting-started guide and an initial desktop shortcut.
+  * Start new ISO installations with protection switches off and brand Calamares.
+
+ -- Sentinel Project <noreply@sentinel.invalid>  Tue, 13 Oct 2026 19:00:00 +0000
+
+sentinel (0.1.0-8) resolute; urgency=medium
+
+  * Report an existing Neovim installation without network access or failure.
+  * Share bounded APT execution between manual and scheduled updates.
+  * Fail index refresh on any repository error and prohibit update removals.
+
+ -- Sentinel Project <noreply@sentinel.invalid>  Tue, 13 Oct 2026 16:00:00 +0000
+
+sentinel (0.1.0-7) resolute; urgency=medium
+
+  * Include approved wl-clipboard in the Coding bundle for Wayland clipboard
+    integration with Neovim.
+
+ -- Sentinel Project <noreply@sentinel.invalid>  Mon, 12 Oct 2026 14:55:00 +0000
+
+sentinel (0.1.0-6) resolute; urgency=medium
+
+  * Require backend-verified Guardian PIN entry before displaying Portal pages.
+  * Hide cached Portal content during outages and reset entry authorization.
+  * Preserve independent PIN-protected recovery and per-change authorization.
+
+ -- Sentinel Project <noreply@sentinel.invalid>  Mon, 12 Oct 2026 00:15:00 +0000
+
+sentinel (0.1.0-5) resolute; urgency=medium
+
+  * Consolidate Guardian management into the Portal and remove old menu apps.
+  * Preserve hidden authenticated recovery and expose it in an offline Portal.
+  * Keep Portal launches independent of the backend when Guardian gates apply.
+
+ -- Sentinel Project <noreply@sentinel.invalid>  Sun, 11 Oct 2026 23:20:00 +0000
+
+sentinel (0.1.0-4) resolute; urgency=medium
+
+  * Join GUI workers before destroying Portal/App Store Qt objects on exit.
+  * Protect Portal daily-status work and App Store operations during close.
+
+ -- Sentinel Project <noreply@sentinel.invalid>  Sun, 11 Oct 2026 23:00:00 +0000
+
+sentinel (0.1.0-3) resolute; urgency=medium
+
+  * Correct the KConfig list format for the monitor's KWin screenshot permission.
+  * Import AdGuard activity events sharing a timestamp without comparing dicts.
+
+ -- Sentinel Project <noreply@sentinel.invalid>  Sun, 11 Oct 2026 22:25:00 +0000
+
+sentinel (0.1.0-2) resolute; urgency=medium
+
+  * Accept Ubuntu's root:syslog group-writable /var/log system parent while
+    retaining strict ownership and permissions for Sentinel directories.
+  * Document verification of package configuration after installation.
+
+ -- Sentinel Project <noreply@sentinel.invalid>  Sun, 11 Oct 2026 20:30:00 +0000
+
+sentinel (0.1.0-1) resolute; urgency=medium
+
+  * Initial Kubuntu 26.04 amd64 package definitions and build automation.
+
+ -- Sentinel Project <noreply@sentinel.invalid>  Sun, 11 Oct 2026 17:00:00 +0000

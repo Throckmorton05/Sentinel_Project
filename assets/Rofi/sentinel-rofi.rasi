@@ -1,0 +1,179 @@
+/* Sentinel application launcher.
+ * Install as ~/.config/rofi/config.rasi.
+ * Navy matches your active Konsole scheme; background opacity is 90%.
+ */
+configuration {
+    modes: "drun";
+    font: "JetBrainsMono Nerd Font 11";
+    show-icons: true;
+    icon-theme: "breeze";
+    terminal: "konsole";
+    drun-display-format: "{name}";
+    display-drun: "Search";
+    matching: "fuzzy";
+    case-sensitive: false;
+    scroll-method: 1;
+    sidebar-mode: false;
+}
+
+/* Discard the built-in theme so its layout does not leak into this one. */
+@theme "/dev/null"
+
+* {
+    navy: rgba(7, 7, 39, 0.90);
+    foreground: #e3e5e5;
+    blue: #769ff0;
+    muted: #a0a9cb;
+    clear: rgba(0, 0, 0, 0.0);
+
+    background-color: @clear;
+    text-color: @foreground;
+    border-color: @blue;
+    font: "JetBrainsMono Nerd Font 11";
+}
+
+window {
+    location: center;
+    anchor: center;
+    fullscreen: false;
+    width: 18em;
+    height: 24em;
+    background-color: @navy;
+    border: 2px;
+    border-radius: 12px;
+    padding: 12px;
+}
+
+mainbox {
+    expand: true;
+    orientation: vertical;
+    spacing: 6px;
+    children: [ "textbox-sentinel", "inputbar", "message", "listview", "textbox-hint" ];
+}
+
+textbox-sentinel {
+    expand: false;
+    str: "SENTINEL";
+    font: "JetBrainsMono Nerd Font Bold 11";
+    text-color: @blue;
+}
+
+inputbar {
+    expand: false;
+    orientation: horizontal;
+    spacing: 8px;
+    padding: 8px 10px;
+    border: 1px;
+    border-color: rgba(118, 159, 240, 0.55);
+    border-radius: 10px;
+    background-color: rgba(33, 39, 54, 0.75);
+    children: [ "prompt", "entry" ];
+}
+
+prompt {
+    expand: false;
+    text-color: @blue;
+}
+
+entry {
+    expand: true;
+    placeholder: "Find an application...";
+    placeholder-color: @muted;
+    cursor-color: @blue;
+}
+
+message {
+    expand: false;
+    padding: 8px;
+    border-radius: 8px;
+    background-color: rgba(57, 66, 96, 0.75);
+}
+
+textbox {
+    text-color: @foreground;
+}
+
+listview {
+    expand: true;
+    columns: 1;
+    lines: 8;
+    layout: vertical;
+    flow: vertical;
+    fixed-height: true;
+    dynamic: false;
+    scrollbar: true;
+    cycle: false;
+    spacing: 3px;
+    padding: 0px;
+    border: 0px;
+}
+
+element {
+    orientation: horizontal;
+    children: [ "element-icon", "element-text" ];
+    spacing: 8px;
+    padding: 6px 8px;
+    border: 0px;
+    border-radius: 8px;
+    background-color: @clear;
+    text-color: @foreground;
+}
+
+element normal.normal {
+    background-color: @clear;
+    text-color: @foreground;
+}
+
+element alternate.normal {
+    background-color: rgba(57, 66, 96, 0.25);
+    text-color: @foreground;
+}
+
+element selected.normal {
+    background-color: @blue;
+    text-color: #111827;
+}
+
+element normal.active, element alternate.active {
+    background-color: rgba(57, 66, 96, 0.60);
+    text-color: @blue;
+}
+
+element selected.active, element selected.urgent {
+    background-color: @blue;
+    text-color: #111827;
+}
+
+element normal.urgent, element alternate.urgent {
+    background-color: @clear;
+    text-color: #ffb4b4;
+}
+
+element-icon {
+    expand: false;
+    size: 1.2em;
+    background-color: @clear;
+}
+
+element-text {
+    expand: true;
+    vertical-align: 0.5;
+    background-color: @clear;
+    text-color: inherit;
+    highlight: bold;
+}
+
+scrollbar {
+    width: 5px;
+    handle-width: 5px;
+    handle-color: @blue;
+    background-color: rgba(118, 159, 240, 0.12);
+    border-radius: 3px;
+}
+
+textbox-hint {
+    expand: false;
+    str: "↑/↓ Select · Enter Open\nEsc Close";
+    font: "JetBrainsMono Nerd Font 9";
+    text-color: @muted;
+}

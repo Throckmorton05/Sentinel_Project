@@ -1,0 +1,29 @@
+{
+  "manifest_version": 3,
+  "name": "Sentinel Extensions",
+  "version": "0.1.10",
+  "description": "Find approved browser extensions from the always-available Sentinel toolbar icon.",
+  "minimum_chrome_version": "120",
+  "host_permissions": [
+    "http://127.0.0.1/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_title": "Browse approved extensions",
+    "default_icon": "icons/48.png"
+  },
+  "icons": {
+    "16": "icons/16.png",
+    "48": "icons/48.png",
+    "128": "icons/128.png"
+  },
+  "update_url": "http://127.0.0.1:8765/extensions/catalog/updates.xml",
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'none'; connect-src http://127.0.0.1:8765; base-uri 'none'"
+  },
+  "permissions": [
+    "favicon"
+  ]
+}

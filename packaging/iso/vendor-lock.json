@@ -1,0 +1,45 @@
+{
+  "format_version": 1,
+  "assets": {
+    "adguardhome": {
+      "repository": "AdguardTeam/AdGuardHome",
+      "version": "v0.107.79",
+      "url": "https://github.com/AdguardTeam/AdGuardHome/releases/download/v0.107.79/AdGuardHome_linux_amd64.tar.gz",
+      "sha256": "c48f4a43000665484c5ec28177de11a004759b620dae8f77b2aabefc9ef3687f",
+      "size": 12384479,
+      "filename": "AdGuardHome_linux_amd64.tar.gz"
+    },
+    "starship": {
+      "repository": "starship/starship",
+      "version": "v1.26.0",
+      "url": "https://github.com/starship/starship/releases/download/v1.26.0/starship-x86_64-unknown-linux-gnu.tar.gz",
+      "sha256": "321f0dd7af8340a5f2e6a8fec6538a04f617486f9ec70d878f91c09cd8deef22",
+      "size": 5115170,
+      "filename": "starship-x86_64-unknown-linux-gnu.tar.gz"
+    },
+    "fastfetch": {
+      "repository": "fastfetch-cli/fastfetch",
+      "version": "2.69.0",
+      "url": "https://github.com/fastfetch-cli/fastfetch/releases/download/2.69.0/fastfetch-linux-amd64.deb",
+      "sha256": "cd91bc80ba416e2089e4dd40ea087e9e02028aeeb65988f92e17ede8da1c1bda",
+      "size": 7192316,
+      "filename": "fastfetch-linux-amd64.deb"
+    },
+    "nerd-fonts": {
+      "repository": "ryanoasis/nerd-fonts",
+      "version": "v3.5.1",
+      "url": "https://github.com/ryanoasis/nerd-fonts/releases/download/v3.5.1/JetBrainsMono.zip",
+      "sha256": "fab782a66f7d3019da64f6572db9fc5d3a4bcb19f9fa13e2d8a62e3693d6396e",
+      "size": 133975870,
+      "filename": "JetBrainsMono.zip"
+    },
+    "starship-license": {
+      "repository": "starship/starship",
+      "version": "v1.26.0",
+      "url": "https://github.com/starship/starship/raw/refs/tags/v1.26.0/LICENSE",
+      "sha256": "2587580d0ec4ddc43d1534745a19ffeec0b63186497c2ed4bc36832da91b13e2",
+      "size": 758,
+      "filename": "starship-LICENSE.txt"
+    }
+  }
+}

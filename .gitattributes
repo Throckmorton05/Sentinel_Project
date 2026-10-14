@@ -1,0 +1,2 @@
+*.safetensors filter=lfs diff=lfs merge=lfs -text
+packaging/models/hentai-vit/model.onnx filter=lfs diff=lfs merge=lfs -text

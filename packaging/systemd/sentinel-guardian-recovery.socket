@@ -1,0 +1,15 @@
+[Unit]
+Description=Sentinel Guardian App Access recovery endpoint
+
+[Socket]
+ListenStream=/run/sentinel/guardian-recovery.sock
+SocketUser=root
+SocketGroup=sentinel
+SocketMode=0660
+DirectoryMode=0755
+Accept=yes
+MaxConnections=4
+RemoveOnStop=yes
+
+[Install]
+WantedBy=sockets.target

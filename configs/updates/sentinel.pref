@@ -1,0 +1,7 @@
+Package: sentinel sentinel-core sentinel-assets sentinel-models sentinel-desktop sentinel-platform
+Pin: release o=Sentinel
+Pin-Priority: 700
+
+Package: sentinel sentinel-core sentinel-assets sentinel-models sentinel-desktop sentinel-platform
+Pin: origin "*"
+Pin-Priority: -1

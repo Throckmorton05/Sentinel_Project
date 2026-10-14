@@ -1,0 +1,31 @@
+---
+componentName: sentinel
+welcomeStyleCalamares: false
+welcomeExpandingLogo: true
+windowExpanding: normal
+windowSize: 1000px,680px
+windowPlacement: center
+strings:
+    productName: Sentinel Linux
+    shortProductName: Sentinel
+    version: 0.1.0 Beta
+    shortVersion: 0.1.0
+    versionedName: Sentinel Linux 0.1.0 Beta
+    shortVersionedName: Sentinel 0.1.0 Beta
+    bootloaderEntryName: Sentinel Linux
+    productUrl: ""
+    supportUrl: ""
+    knownIssuesUrl: ""
+    releaseNotesUrl: ""
+    donateUrl: ""
+images:
+    productIcon: logo.svg
+    productLogo: logo.svg
+    productWelcome: welcome.svg
+style:
+    SidebarBackground: "#111c2e"
+    SidebarText: "#a6bbd5"
+    SidebarBackgroundCurrent: "#284c70"
+    SidebarTextCurrent: "#eef5ff"
+slideshow: show.qml
+slideshowAPI: 2

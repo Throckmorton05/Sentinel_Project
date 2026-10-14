@@ -1,0 +1,40 @@
+{
+  "active_permissions": {
+    "api": [],
+    "explicit_host": [
+      "http://127.0.0.1:8765/*"
+    ],
+    "manifest_permissions": [],
+    "scriptable_host": [
+      "https://store.steampowered.com/*"
+    ]
+  },
+  "commands": {},
+  "content_settings": [],
+  "creation_flags": 38,
+  "events": [],
+  "first_install_time": "13433203227878301",
+  "from_webstore": false,
+  "granted_permissions": {
+    "api": [],
+    "explicit_host": [
+      "http://127.0.0.1:8765/*"
+    ],
+    "manifest_permissions": [],
+    "scriptable_host": [
+      "https://store.steampowered.com/*"
+    ]
+  },
+  "incognito_content_settings": [],
+  "incognito_preferences": {},
+  "last_update_time": "13433203230564548",
+  "location": 4,
+  "newAllowFileAccess": true,
+  "path": "@SAFE_STEAM_PATH@",
+  "preferences": {},
+  "regular_only_preferences": {},
+  "state": 1,
+  "was_installed_by_default": false,
+  "was_installed_by_oem": false,
+  "withholding_permissions": false
+}

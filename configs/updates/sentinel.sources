@@ -1,0 +1,7 @@
+Types: deb
+URIs: https://github.com/Throckmorton05/Sentinel_Project/releases/download/apt-beta/
+Suites: ./
+Architectures: amd64
+Signed-By: /usr/share/keyrings/sentinel-archive-keyring.gpg
+Check-Valid-Until: yes
+By-Hash: no

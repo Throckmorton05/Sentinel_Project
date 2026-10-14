@@ -1,0 +1,6 @@
+# Copy to /etc/sentinel/adguard.toml, owned by root and mode 0600.
+# Use the credentials you created in AdGuard Home; there is no default password.
+[adguard]
+url = "http://127.0.0.1:3000"
+username = ""
+password = ""

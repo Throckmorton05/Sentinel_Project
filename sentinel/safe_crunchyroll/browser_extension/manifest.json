@@ -1,0 +1,25 @@
+{
+  "manifest_version": 3,
+  "name": "Sentinel Safe Crunchyroll",
+  "version": "0.3.0",
+  "update_url": "http://127.0.0.1:8765/extensions/safe-crunchyroll/updates.xml",
+  "description": "Blocks Crunchyroll content with three sexual advisories or restricted maturity advisories, according to Sentinel policy.",
+  "content_scripts": [
+    {
+      "matches": [
+        "https://www.crunchyroll.com/*"
+      ],
+      "js": [
+        "policy.js",
+        "content.js"
+      ],
+      "run_at": "document_start"
+    }
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "host_permissions": [
+    "http://127.0.0.1:8765/*"
+  ]
+}

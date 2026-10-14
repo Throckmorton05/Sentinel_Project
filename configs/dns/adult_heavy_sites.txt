@@ -1,0 +1,339 @@
+# Sentinel: expanded adult-heavy and alternative-anime domain list
+# Updated: 2026-10-13
+# Format: one domain per line; all explanatory/source lines start with #.
+#
+# Scope: preserve the existing mixed-content list, add WCO/anime alternatives,
+# and add selected communities/galleries that support sexual adult material.
+# Anime entries are selected to keep viewing within Safe Crunchyroll coverage.
+# A site's presence does not mean every item on that site is pornographic.
+# No quantitative measurement of the adult-content share was performed.
+#
+# Sentinel renders each domain as an AdGuard domain-and-subdomain block.
+# Parent domains cover www and other subdomains automatically.
+# Whole-domain rules also block safe posts, art, cartoons, games, and assets.
+# The reviewed and legacy sections distinguish the evidence for inclusion.
+# This is a manually curated starting list, not exhaustive mirror detection.
+# Availability, domains, and ownership can change; review before deployment.
+#
+# Project source: configs/dns/adult_heavy_sites.txt
+# Installed data: /usr/share/sentinel/dns/adult_heavy_sites.txt
+# Settings: dns.enabled=true and dns.adult_heavy_sites=true
+# Install the file and regenerate DNS rules to apply changes.
+# DNS enforcement requires the device to actually use the filtering resolver.
+# This file alone does not change network DNS routing.
+#
+# Domain entries are parsed and deduplicated at runtime.
+
+# ==========================================================================
+# Existing Sentinel mixed-content sites
+# Preserves the coverage of the current project list; redundant www/old aliases
+# are covered by the parent domain rule.
+# ==========================================================================
+reddit.com
+deviantart.com
+furaffinity.net
+tumblr.com
+newgrounds.com
+x.com
+twitter.com
+bsky.app
+imgur.com
+pixiv.net
+
+# ==========================================================================
+# WCO / WatchCartoonOnline family: directory-listed addresses and status hub
+# Includes WCOStream, WCOForever, WCOFlix, dubbed/subbed anime, and the
+# domain/status hub. The WCO status page also names watchcartoononline.com
+# as an address under construction. Inclusion targets unfiltered alternative
+# viewing; it does not assert that all WCO content is sexual.
+# ==========================================================================
+wco.tv
+wcostream.tv
+wcoforever.net
+wcoflix.tv
+wcoanimesub.tv
+wcoanimedub.tv
+wcostatus.com
+watchcartoononline.com
+
+# ==========================================================================
+# WCO family: supplemental and previous addresses
+# Previously reported family addresses, including the premium address.
+# Current reachability and ownership were not independently confirmed.
+# Retain for coverage of redirects, reactivation, and brand reuse; review
+# this section periodically because a domain can change owners.
+# ==========================================================================
+wcostream.com
+wcostream.net
+wcofun.com
+wcofun.net
+wcofun.tv
+wcoforever.tv
+thewatchcartoononline.tv
+watchcartoononline.io
+wcopremium.tv
+
+# ==========================================================================
+# Anime streaming and mirror-discovery addresses: public directory snapshot
+# Addresses listed in FMHY anime streaming as reviewed on 2026-10-06.
+# They are filtering candidates because Safe Crunchyroll only runs on
+# crunchyroll.com. This section covers alternative players and associated
+# mirror/status hubs. Listing in a directory is not an uptime test or
+# verification of an operator. Similar names do not prove common ownership.
+# anidb.app below is a streaming entry; the different anidb.net is not listed.
+# ==========================================================================
+miruro.com
+miruro.tv
+miruro.bz
+miruro.cx
+miruro.to
+animepahe.pw
+kaa.lt
+mkissa.to
+allmanga.to
+animex.one
+anikototv.to
+animesuge.cz
+anikoto.site
+animesuge.bid
+ani.pm
+anidap.lol
+reanime.to
+reanime.cz
+reanime.wtf
+reindex.to
+restatus.me
+anistream.one
+kazora.cc
+lunarx.to
+nekowatch.xyz
+justanime.to
+projectjust.xyz
+anilight.live
+anixo.online
+anikuro.to
+anikuro.ru
+anikuro.site
+meguanime.com
+aniwaves.ru
+hianimes.ru
+123animehub.cc
+senshi.to
+anizone.to
+anidoor.me
+anisnatch.top
+anisnatch.site
+anime.uniquestream.net
+kototv.to
+aniwatch.rest
+anime.nexus
+luffytv.live
+luffytv.online
+anichan.to
+animeparadise.moe
+animedex.fun
+anify.to
+anidb.app
+enma.lol
+anikura.club
+1ani.me
+kyren.moe
+anikage.cc
+yenime.net
+animenosub.to
+banime.top
+animeonsen.xyz
+yomi.to
+sakusaku.to
+babyanime.top
+aniclipse.com
+anihq.cc
+luna-stream.me
+aninami.site
+rivestream.app
+rivestream.ru
+kawaiianime.cc
+fireani.me
+9animstv.to
+piratexplay.cc
+piratexplay.com
+kuroiru.co
+animexin.dev
+luciferdonghua.in
+lmanime.com
+donghuastream.org
+donghua4k.net
+myanime.live
+animekhor.org
+crimsonfansubs.com
+
+# ==========================================================================
+# AnimeKai streaming address and domain-discovery hub
+# The reviewed streaming page advertises Ecchi, Erotica, and Hentai categories.
+# The hub links to the .be address. This records what those pages currently
+# advertise; it does not certify their ownership or licensing.
+# ==========================================================================
+animekai.be
+animekai.help
+
+# ==========================================================================
+# Previous anime streaming addresses and brands: legacy coverage
+# Known earlier addresses. Some original services have closed or rebranded.
+# Current operation and ownership are unverified; keep or remove this section
+# according to your legacy-domain blocking policy. Do not assume a similarly
+# named replacement is the original service.
+# ==========================================================================
+hianime.to
+aniwatch.to
+zoro.to
+aniwave.to
+9anime.to
+9anime.ru
+kissanime.ru
+kissanime.com
+gogoanime.io
+gogoanime.tv
+gogoanime.so
+gogoanime.pe
+anitaku.to
+anitaku.pe
+animepahe.si
+animepahe.com
+animepahe.org
+animekai.to
+animekai.pw
+
+# ==========================================================================
+# Mixed art, animation, fandom, and blogging communities
+# Communities with adult artwork or adult-content settings. As with Reddit
+# and Newgrounds, blocking the domain also blocks ordinary safe content.
+# Pillowfort, Inkbunny, SoFurry, and Weasyl publish adult-content/rating rules.
+# ==========================================================================
+inkbunny.net
+sofurry.com
+weasyl.com
+pillowfort.social
+
+# ==========================================================================
+# Art imageboards and galleries with sexual/explicit material
+# Mixed imageboards and adult-art galleries. Use the specific Danbooru
+# subdomain so this entry does not also target safebooru.donmai.us.
+# Derpibooru has default filtering, but adult material is supported.
+# ==========================================================================
+danbooru.donmai.us
+gelbooru.com
+e621.net
+e6ai.net
+yande.re
+konachan.com
+sankakucomplex.com
+sankakuapi.com
+derpibooru.org
+trixiebooru.org
+hentai-foundry.com
+
+# ==========================================================================
+# Discussion, social, and user-submitted media with adult material
+# 4chan includes dedicated adult boards. Pawoo publishes NSFW-label rules.
+# Redgifs is an adult-media host; Scrolller exposes adult image/video browsing.
+# The lemmynsfw.com entry below is retained as archive/legacy coverage, not
+# a claim that its original community is fully operational.
+# ==========================================================================
+4chan.org
+pawoo.net
+redgifs.com
+scrolller.com
+lemmynsfw.com
+
+# ==========================================================================
+# Mixed game and AI-image platforms with adult-content support
+# itch.io permits legal illustrated/rendered adult content with labeling.
+# This domain block also removes normal indie games and development assets.
+# Civitai has mature/adult image filtering and a separate .red domain.
+# Other Civitai domains should be reviewed individually before adding them.
+# ==========================================================================
+itch.io
+civitai.com
+civitai.red
+
+# ==========================================================================
+# Reddit, Newgrounds, Pixiv, and X dedicated media/short-link hosts
+# Additional domains for directly linked media or short links from platforms
+# already blocked above. These also carry safe content. General shared
+# hosting services and infrastructure providers are not added.
+# ==========================================================================
+redd.it
+redditmedia.com
+redditstatic.com
+reddituploads.com
+ngfiles.com
+pximg.net
+twimg.com
+
+# ==========================================================================
+# Art commissions and freelance marketplaces
+# Mixed-content platforms with mature/adult commission listings or published
+# NSFW/maturity-label guidance. Fiverr is included by the Sentinel product
+# policy. This blocks all hiring/commission services on these domains, not just
+# adult listings. Parent-domain entries include the platforms' subdomains.
+# Reviewed: 2026-10-13. Listing here does not measure adult-content prevalence.
+# ==========================================================================
+fiverr.com
+vgen.co
+artistree.io
+artistsnclients.com
+skeb.jp
+commishes.com
+
+# ==========================================================================
+# Review sources (comments only; not DNS rules)
+# ==========================================================================
+# Commission marketplace listings and content-label guidelines:
+# https://www.fiverr.com/pinkyugo/anime-art-oc-fanart-nsfw
+# https://help.vgen.co/hc/en-us/articles/36157219002263-How-Mature-and-Sensitive-Content-Tags-Work-on-VGen
+# https://artistree.io/linverse.arts
+# https://artistsnclients.com/slots/107184-nsfw-art
+# https://lp.skeb.jp/client?locale=en
+# https://wiki.commishes.com/en/rules
+# Anime/cartoon directory snapshot, including WCO, anime mirrors and hubs:
+# https://fmhy.net/video#anime-streaming
+# https://fmhy.net/video#cartoon-streaming
+# WCO status/ownership notice:
+# https://www.wcostatus.com/
+# Supplemental WCO addresses reported in the community/domain review:
+# https://www.documentarytube.com/blog/which-one-is-the-real-wco-r-watchcartoononline/
+# https://www.reddit.com/r/WatchCartoonOnline/comments/1k9d0og/
+# AnimeKai page and hub:
+# https://animekai.be/
+# https://www.animekai.help/
+# HiAnime closure reporting (legacy status):
+# https://torrentfreak.com/piracy-giant-hianime-to-announces-mysterious-goodbye/
+# Newgrounds adult original-art submission policy:
+# https://www.newgrounds.com/wiki/help-information/content-submission
+# Community adult-content/rating policies:
+# https://www.pillowfort.social/faq
+# https://inkbunny.net/userrate.php
+# https://wiki.sofurry.com/wiki/Acceptable_Use_Policy
+# https://www.weasyl.com/help/ratings
+# https://www.weasyl.com/policy/community
+# Imageboard metadata and supported gallery domains:
+# https://en.wikipedia.org/wiki/Danbooru
+# https://www.dictionary.com/culture/slang/e621
+# https://github.com/Xwilarg/BooruSharp
+# https://konachan.com/wiki/show?title=FAQ%3A_Links
+# https://trixiebooru.org/pages/rules
+# https://fanlore.org/wiki/Hentai_Foundry
+# https://en.wikipedia.org/wiki/RedGIFs
+# https://github.com/PereViader/Scrolller.Net
+# Discussion/social policies and archive metadata:
+# https://4chan.org/rules
+# https://pawoo.net/
+# https://lemmynsfw.com/c/modcoord
+# Mixed-platform adult-content policy / implementation:
+# https://itch.io/docs/creators/quality-guidelines
+# https://itch.io/docs/creators/faq
+# https://github.com/civitai/civitai/blob/main/docs/features/nsfw-filtering.md
+# https://github.com/civitai/civitai/blob/main/src/server/utils/server-domain.ts
+# Some supporting/legacy hosts are known service addresses rather than independently
+# checked live pages. Source notes support inclusion, not a claim of universal
+# reachability, original ownership, or a measured adult-content percentage.

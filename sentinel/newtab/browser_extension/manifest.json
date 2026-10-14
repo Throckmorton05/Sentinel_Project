@@ -1,0 +1,13 @@
+{
+  "manifest_version": 3,
+  "name": "Sentinel New Tab",
+  "version": "0.1.1",
+  "description": "Optional Sentinel start page. Disable this extension to use Chrome's standard New Tab page.",
+  "minimum_chrome_version": "120",
+  "icons": { "16": "icons/16.png", "48": "icons/48.png", "128": "icons/128.png" },
+  "chrome_url_overrides": { "newtab": "newtab.html" },
+  "update_url": "http://127.0.0.1:8765/extensions/newtab/updates.xml",
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'none'; base-uri 'none'"
+  }
+}

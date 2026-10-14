@@ -1,0 +1,91 @@
+# Poetry / virtualenv
+.venv/
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+
+# Pytest
+.pytest_cache/
+
+# Mypy
+.mypy_cache/
+
+# Ruff
+.ruff_cache/
+
+# OS files
+.DS_Store
+
+# Editor files
+*.swp
+.vscode/
+.idea/
+
+# Generated DNS files
+sentinel/dns/data/*
+!sentinel/dns/data/social_media.txt
+!sentinel/dns/data/LICENSE-hagezi.txt
+!sentinel/dns/data/adult.txt
+!sentinel/dns/data/gambling.txt
+!sentinel/dns/data/browsers_sans_safesearch.txt
+
+# AI model caches
+.opennsfw2/
+.keras/
+
+# Model files
+*.h5
+*.onnx
+!packaging/models/hentai-vit/model.onnx
+!sentinel/image_blocking/models/
+!sentinel/image_blocking/models/**
+
+*.pt
+*.pth
+*.bin
+
+
+
+# Test datasetsw
+test_images/
+
+# Future local model storage
+sentinel/image_blocking/models/a/
+
+# Sentinel runtime logs
+Sentinel_Logs/
+
+# Private signing keys and local secrets; public .gpg verification keys remain public.
+*.pem
+*.key
+*.p12
+*.pfx
+.env
+.env.*
+!.env.example
+
+# (Optional, if you ever move it inside the package)
+# sentinel/image_blocking/screen_monitor/logs/
+
+
+# Python build output
+dist/
+build/
+
+# Debian package staging and local build inputs
+debian/.debhelper/
+debian/debhelper-build-stamp
+debian/files
+debian/*.substvars
+debian/*.debhelper
+debian/sentinel/
+debian/sentinel-core/
+debian/sentinel-assets/
+debian/sentinel-models/
+debian/sentinel-desktop/
+debian/tmp/
+
+# Public browser_distribution CRX/XML/metadata may be tracked.
+# Private extension keys belong outside this checkout.

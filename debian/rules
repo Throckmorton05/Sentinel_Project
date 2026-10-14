@@ -1,0 +1,49 @@
+#!/usr/bin/make -f
+
+export DH_VERBOSE = 1
+export PYTHONDONTWRITEBYTECODE = 1
+export PYTHONNOUSERSITE = 1
+
+%:
+	dh $@
+
+override_dh_auto_configure:
+
+override_dh_auto_build:
+	/usr/bin/python3.14 packaging/debian/stage.py validate
+
+override_dh_auto_test:
+	/usr/bin/python3.14 -m unittest discover -s packaging/debian/tests -v
+
+override_dh_auto_install:
+	/usr/bin/python3.14 packaging/debian/stage.py install
+
+override_dh_auto_clean:
+
+override_dh_installsystemd:
+	dh_installsystemd -psentinel-core --no-start sentineld.service sentinel-guardian-recovery.socket
+	dh_installsystemd -psentinel-core --no-start --no-enable sentinel-opennsfw.service sentinel-drawn.service sentinel-hentai.service sentinel-nudenet.service sentinel-guardian-recovery@.service
+
+# These libraries are private to Sentinel; do not advertise Qt and other
+# vendored libraries as public libraries provided by sentinel-core.
+override_dh_makeshlibs:
+	dh_makeshlibs -Xusr/lib/sentinel/venv
+
+# Vendored wheels carry their own binary dependency metadata. Generate ELF
+# dependencies for the dedicated system-Python executable, not wheel-private Qt.
+override_dh_shlibdeps:
+	dh_shlibdeps -psentinel-core -Xusr/lib/sentinel/venv/lib
+
+# Keep dynamic symbols required at runtime; retain original wheels separately.
+# The package set is deliberately five packages, without automatic dbgsym debs.
+override_dh_strip:
+	dh_strip --no-automatic-dbgsym
+
+override_dh_dwz:
+
+# stage.py has already assigned executable modes to programs, not libraries.
+override_dh_fixperms:
+	dh_fixperms -Xusr/lib/sentinel/venv
+
+override_dh_compress:
+	dh_compress -Xusr/lib/sentinel/venv

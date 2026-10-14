@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>New Tab · Sentinel</title>
+    <script src="theme.js"></script>
+    <script src="shortcuts.js" defer></script>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="newtab">
+    <header class="topbar">
+      <a class="brand" href="newtab.html"
+        ><span class="brand-shield" aria-hidden="true"></span>Sentinel</a
+      ><a class="nav-link" href="catalog.html"
+        >Approved extensions <span aria-hidden="true">↗</span></a
+      >
+    </header>
+    <main class="start">
+      <h1 class="sr-only">New Tab</h1>
+      <form
+        class="google-search"
+        action="https://www.google.com/search"
+        method="get"
+        role="search"
+      >
+        <label class="sr-only" for="google-query">Search Google</label>
+        <span class="search-icon" aria-hidden="true">⌕</span
+        ><input
+          id="google-query"
+          name="q"
+          type="search"
+          placeholder="Search Google"
+          autocomplete="off"
+          autofocus
+          required
+        /><button type="submit">
+          Search <span aria-hidden="true">→</span>
+        </button>
+      </form>
+      <button class="discover shortcut-add" id="add-shortcut" type="button">
+        <span class="discover-icon" aria-hidden="true">+</span
+        ><span><strong>Add shortcut</strong></span
+        ><span class="discover-arrow" aria-hidden="true">→</span>
+      </button>
+      <p
+        id="shortcut-message"
+        class="shortcut-message"
+        role="status"
+        aria-live="polite"
+      ></p>
+      <section
+        id="shortcuts"
+        class="shortcut-grid"
+        aria-label="Website shortcuts"
+      ></section>
+    </main>
+    <footer class="start-footer">
+      <label class="theme-picker" for="theme-select">
+        Theme
+        <select id="theme-select">
+          <option value="dark">Dark</option>
+          <option value="light">Light</option>
+          <option value="neon">Neon purple</option>
+          <option value="neon-green">Neon green</option>
+          <option value="neon-red">Neon red</option>
+          <option value="mono">Monochrome</option>
+          <option value="terminal">Terminal</option>
+          <option value="terminal-catppuccin">Catppuccin terminal</option>
+          <option value="terminal-red">Red terminal</option>
+          <option value="terminal-blue">Blue terminal</option>
+          <option value="terminal-purple">Purple terminal</option>
+          <option value="terminal-tokyo">Tokyo terminal</option>
+          <option value="terminal-tokyo-dark">Dark Tokyo terminal</option>
+        </select>
+      </label>
+    </footer>
+    <dialog
+      id="shortcut-dialog"
+      class="shortcut-dialog"
+      aria-labelledby="shortcut-title"
+    >
+      <form id="shortcut-form">
+        <h2 id="shortcut-title">Add shortcut</h2>
+        <label for="shortcut-name">Name</label>
+        <input
+          id="shortcut-name"
+          type="text"
+          maxlength="80"
+          autocomplete="off"
+          required
+        />
+        <label for="shortcut-url">Website</label>
+        <input
+          id="shortcut-url"
+          type="text"
+          inputmode="url"
+          maxlength="2048"
+          placeholder="example.com"
+          autocomplete="off"
+          required
+        />
+        <p id="shortcut-error" class="dialog-error" role="alert"></p>
+        <div class="dialog-actions">
+          <button
+            id="shortcut-remove"
+            class="quiet-button"
+            type="button"
+            hidden
+          >
+            Remove
+          </button>
+          <button id="shortcut-cancel" class="quiet-button" type="button">
+            Cancel
+          </button>
+          <button id="shortcut-save" class="store-button" type="submit">
+            Add
+          </button>
+        </div>
+      </form>
+    </dialog>
+  </body>
+</html>

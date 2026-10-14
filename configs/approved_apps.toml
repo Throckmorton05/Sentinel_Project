@@ -1,0 +1,1012 @@
+# SentinelHub Approved Applications
+
+# Browsers
+
+[apps.chrome]
+flatpak_id = "com.google.Chrome"
+name = "Google Chrome"
+summary = "Use the native Google Chrome Stable package; Flatpak Chrome is not supported"
+categories = ["browsers"]
+enabled = false
+
+# Media Creation
+
+[apps.krita]
+flatpak_id = "org.kde.krita"
+name = "Krita"
+summary = "Professional digital painting application"
+categories = ["media_creation", "art"]
+enabled = true
+
+[apps.gimp]
+flatpak_id = "org.gimp.GIMP"
+name = "GIMP"
+summary = "Advanced image editing and manipulation software"
+categories = ["media_creation", "art", "photo_editing"]
+enabled = true
+
+[apps.inkscape]
+flatpak_id = "org.inkscape.Inkscape"
+name = "Inkscape"
+summary = "Vector graphics editor for illustrations and design"
+categories = ["media_creation", "art", "vector_graphics"]
+enabled = true
+
+[apps.pinta]
+flatpak_id = "com.github.PintaProject.Pinta"
+name = "Pinta"
+summary = "Simple and lightweight image editor"
+categories = ["media_creation", "art", "photo_editing"]
+enabled = true
+
+[apps.kdenlive]
+flatpak_id = "org.kde.kdenlive"
+name = "Kdenlive"
+summary = "Non-linear video editing application"
+categories = ["media_creation", "video_editing"]
+enabled = true
+
+[apps.shotcut]
+flatpak_id = "org.shotcut.Shotcut"
+name = "Shotcut"
+summary = "Open-source cross-platform video editor"
+categories = ["media_creation", "video_editing"]
+enabled = true
+
+[apps.openshot]
+flatpak_id = "org.openshot.OpenShot"
+name = "OpenShot"
+summary = "Beginner-friendly video editing software"
+categories = ["media_creation", "video_editing"]
+enabled = true
+
+[apps.blender]
+flatpak_id = "org.blender.Blender"
+name = "Blender"
+summary = "3D modeling, animation, and rendering suite"
+categories = ["media_creation", "3d", "video_editing", "art", "game_creation"]
+enabled = true
+
+[apps.audacity]
+flatpak_id = "org.audacityteam.Audacity"
+name = "Audacity"
+summary = "Audio recording and editing software"
+categories = ["media_creation", "audio", "recording"]
+enabled = true
+
+[apps.ardour]
+flatpak_id = "org.ardour.Ardour"
+name = "Ardour"
+summary = "Professional digital audio workstation"
+categories = ["media_creation", "audio", "music", "daw"]
+enabled = true
+
+
+
+# Media
+
+[apps.vlc]
+flatpak_id = "org.videolan.VLC"
+name = "VLC"
+summary = "Versatile media player for video and audio"
+categories = ["media", "video", "audio"]
+enabled = true
+
+[apps.libreoffice]
+flatpak_id = "org.libreoffice.LibreOffice"
+name = "LibreOffice"
+summary = "Free and open-source office suite"
+categories = ["productivity", "office", "documents", "media"]
+enabled = true
+
+[apps.okular]
+flatpak_id = "org.kde.okular"
+name = "Okular"
+summary = "Document and PDF viewer from KDE"
+categories = ["productivity", "pdf", "documents", "media"]
+enabled = true
+
+[apps.master_pdf]
+flatpak_id = "net.code_industry.MasterPDFEditor"
+name = "Master PDF Editor"
+summary = "PDF editing and annotation application"
+categories = ["productivity", "pdf", "documents", "media"]
+enabled = true
+
+[apps.celluloid]
+flatpak_id = "io.github.celluloid_player.Celluloid"
+name = "Celluloid"
+summary = "Simple GTK-based video player"
+categories = ["media", "video"]
+enabled = true
+
+[apps.spotify]
+flatpak_id = "com.spotify.Client"
+name = "Spotify"
+summary = "Music streaming platform"
+categories = ["media", "audio", "music"]
+enabled = true
+
+[apps.flameshot]
+flatpak_id = "org.flameshot.Flameshot"
+name = "Flameshot"
+summary = "Powerful screenshot and annotation tool"
+categories = ["utilities", "screenshots", "media"]
+enabled = true
+
+
+
+# Gaming / Communication
+
+[apps.discord]
+flatpak_id = "com.discordapp.Discord"
+name = "Discord"
+summary = "Voice, video, and text communication platform"
+categories = ["communication", "gaming", "social"]
+enabled = true
+
+[apps.minecraft_launcher]
+flatpak_id = "com.mojang.Minecraft"
+name = "Minecraft Launcher"
+summary = "Official Minecraft launcher"
+categories = ["gaming", "minecraft", "launcher"]
+enabled = true
+
+[apps.prismlauncher]
+flatpak_id = "org.prismlauncher.PrismLauncher"
+name = "Prism Launcher"
+summary = "Advanced custom Minecraft launcher"
+categories = ["gaming", "minecraft", "launcher"]
+enabled = true
+
+
+# =========================
+# Game Creation
+# =========================
+
+[apps.godot]
+flatpak_id = "org.godotengine.Godot"
+name = "Godot Engine"
+summary = "Open-source 2D and 3D game engine for creating games and interactive experiences."
+categories = ["game_creation", "game_engine", "development"]
+enabled = true
+
+[apps.unreal_engine]
+flatpak_id = "io.github.achetagames.epic_asset_manager"
+name = "Epic Asset Manager"
+summary = "Unofficial Epic Games asset manager for downloading Unreal Engine assets on Linux."
+categories = ["game_creation", "game_engine", "development", "3d"]
+enabled = true
+
+[apps.gdevelop]
+flatpak_id = "io.gdevelop.ide"
+name = "GDevelop"
+summary = "No-code and low-code game engine for creating 2D games visually."
+categories = ["game_creation", "game_engine", "development"]
+enabled = true
+
+
+[apps.libresprite]
+flatpak_id = "com.github.libresprite.LibreSprite"
+name = "LibreSprite"
+summary = "Free and open-source pixel art and sprite editor."
+categories = ["game_creation", "art", "pixel_art", "development"]
+enabled = true
+
+[apps.tiled]
+flatpak_id = "org.mapeditor.Tiled"
+name = "Tiled"
+summary = "Flexible tile map editor for designing 2D game levels."
+categories = ["game_creation", "level_design", "development"]
+enabled = true
+
+[apps.lmms]
+flatpak_id = "io.lmms.LMMS"
+name = "LMMS"
+summary = "Digital audio workstation for music production and sound creation."
+categories = ["game_creation", "audio", "music", "media_creation", "media", "development"]
+enabled = true
+
+[apps.obs]
+flatpak_id = "com.obsproject.Studio"
+name = "OBS Studio"
+summary = "Professional screen recording and live streaming software."
+categories = ["media_creation", "recording", "streaming", "media"]
+enabled = true
+
+[apps.material_maker]
+flatpak_id = "io.github.RodZill4.Material-Maker"
+name = "Material Maker"
+summary = "Procedural material authoring tool for 3D assets and game development."
+categories = ["game_creation", "3d", "art", "development"]
+enabled = true
+
+[apps.blockbench]
+flatpak_id = "net.blockbench.Blockbench"
+name = "Blockbench"
+summary = "3D modeling and animation tool popular for Minecraft content creation."
+categories = ["game_creation", "3d", "minecraft", "gaming"]
+enabled = true
+
+
+# =========================
+# Coding / Development
+# =========================
+
+[apps.vscode]
+flatpak_id = "com.visualstudio.code"
+name = "Visual Studio Code"
+summary = "Popular code editor with extensions, debugging, and Git integration."
+categories = ["development", "coding", "editor"]
+enabled = true
+
+[apps.vscodium]
+flatpak_id = "com.vscodium.codium"
+name = "VSCodium"
+summary = "Open-source build of VS Code without Microsoft telemetry."
+categories = ["development", "coding", "editor", "privacy"]
+enabled = true
+
+
+[apps.android_studio]
+flatpak_id = "com.google.AndroidStudio"
+name = "Android Studio"
+summary = "Official IDE for Android app development."
+categories = ["development", "coding", "ide", "android"]
+enabled = true
+
+[apps.pycharm]
+flatpak_id = "com.jetbrains.PyCharm-Community"
+name = "PyCharm Community"
+summary = "Python-focused IDE with debugging and project management tools."
+categories = ["development", "coding", "ide", "python"]
+enabled = true
+
+[apps.intellij]
+flatpak_id = "com.jetbrains.IntelliJ-IDEA-Community"
+name = "IntelliJ IDEA Community"
+summary = "Powerful Java and JVM development IDE from JetBrains."
+categories = ["development", "coding", "ide", "java"]
+enabled = true
+
+[apps.eclipse]
+flatpak_id = "org.eclipse.Java"
+name = "Eclipse IDE"
+summary = "Classic Java-focused IDE with plugin support for many languages."
+categories = ["development", "coding", "ide", "java"]
+enabled = true
+
+[apps.codeblocks]
+flatpak_id = "org.codeblocks.codeblocks"
+name = "Code::Blocks"
+summary = "Lightweight open-source IDE for C and C++ development."
+categories = ["development", "coding", "ide", "cpp"]
+enabled = true
+
+[apps.gitkraken]
+flatpak_id = "com.axosoft.GitKraken"
+name = "GitKraken"
+summary = "Graphical Git client with repository visualization and collaboration tools."
+categories = ["development", "git"]
+enabled = true
+
+[apps.github_desktop]
+flatpak_id = "io.github.shiftey.Desktop"
+name = "GitHub Desktop"
+summary = "Simple Git and GitHub client with an easy-to-use graphical interface."
+categories = ["development", "git", "coding"]
+enabled = true
+
+[apps.postman]
+flatpak_id = "com.getpostman.Postman"
+name = "Postman"
+summary = "API testing and development platform for working with web services."
+categories = ["development", "api"]
+enabled = true
+
+[apps.insomnia]
+flatpak_id = "rest.insomnia.Insomnia"
+name = "Insomnia"
+summary = "REST and GraphQL API testing client for developers."
+categories = ["development", "api"]
+enabled = true
+
+[apps.dbeaver]
+flatpak_id = "io.dbeaver.DBeaverCommunity"
+name = "DBeaver Community"
+summary = "Universal database management tool supporting many database systems."
+categories = ["development", "database"]
+enabled = true
+
+[apps.mongodb_compass]
+flatpak_id = "com.mongodb.Compass"
+name = "MongoDB Compass"
+summary = "Graphical interface for exploring and managing MongoDB databases."
+categories = ["development", "database"]
+enabled = true
+
+[apps.syncthing]
+flatpak_id = "com.github.zocker_160.SyncThingy"
+name = "SyncThingy (Syncthing)"
+summary = "Sync files and game saves between your computer and other devices using Syncthing."
+categories = ["utilities", "productivity", "networking", "file", "sync"]
+enabled = true
+
+[apps.filezilla]
+flatpak_id = "org.filezillaproject.Filezilla"
+name = "FileZilla"
+summary = "FTP and SFTP client for transferring files over networks."
+categories = ["development", "ftp", "networking", "file"]
+enabled = true
+
+[apps.wireshark]
+flatpak_id = "org.wireshark.Wireshark"
+name = "Wireshark"
+summary = "Network protocol analyzer for inspecting and troubleshooting traffic."
+categories = ["development", "networking", "security"]
+enabled = true
+
+[apps.devtoolbox]
+flatpak_id = "me.iepure.devtoolbox"
+name = "Dev Toolbox"
+summary = "Collection of utilities and helpers for software developers."
+categories = ["development", "utilities"]
+enabled = true
+
+
+# =========================
+# Password Managers
+# =========================
+
+[apps.bitwarden]
+flatpak_id = "com.bitwarden.desktop"
+name = "Bitwarden"
+summary = "Secure open-source password manager with cloud synchronization."
+categories = ["security", "passwords", "productivity"]
+enabled = true
+
+[apps.keepassxc]
+flatpak_id = "org.keepassxc.KeePassXC"
+name = "KeePassXC"
+summary = "Offline password manager compatible with KeePass databases."
+categories = ["security", "passwords", "privacy"]
+enabled = true
+
+
+# =========================
+# File Managers / Archives
+# =========================
+
+[apps.peazip]
+flatpak_id = "io.github.peazip.PeaZip"
+name = "PeaZip"
+summary = "Archive manager supporting ZIP, 7Z, TAR, and many other formats."
+categories = ["utilities", "archives", "file_management", "file"]
+enabled = true
+
+
+# =========================
+# Notes
+# =========================
+
+[apps.obsidian]
+flatpak_id = "md.obsidian.Obsidian"
+name = "Obsidian"
+summary = "Markdown-based knowledge management and note-taking application."
+categories = ["productivity", "notes", "writing"]
+enabled = true
+
+[apps.joplin]
+flatpak_id = "net.cozic.joplin_desktop"
+name = "Joplin"
+summary = "Open-source note-taking app with synchronization and encryption support."
+categories = ["productivity", "notes", "privacy"]
+enabled = true
+
+[apps.xournalpp]
+flatpak_id = "com.github.xournalpp.xournalpp"
+name = "Xournal++"
+summary = "Handwriting, annotation, and PDF note-taking application."
+categories = ["notes", "pdf", "drawing", "school"]
+enabled = true
+
+
+# =========================
+# Email
+# =========================
+
+[apps.thunderbird]
+flatpak_id = "org.mozilla.Thunderbird"
+name = "Thunderbird"
+summary = "Open-source email client with calendar and productivity features."
+categories = ["communication", "email", "productivity"]
+enabled = true
+
+[apps.proton_mail]
+flatpak_id = "me.proton.Mail"
+name = "Proton Mail"
+summary = "Privacy-focused encrypted email application from Proton."
+categories = ["communication", "email", "privacy"]
+enabled = true
+
+
+# =========================
+# Emulators
+# =========================
+
+[apps.retroarch]
+flatpak_id = "org.libretro.RetroArch"
+name = "RetroArch"
+summary = "Frontend for emulators, game engines, and media players supporting many retro systems."
+categories = ["gaming", "emulation", "retro"]
+enabled = true
+
+[apps.dolphin]
+flatpak_id = "org.DolphinEmu.dolphin-emu"
+name = "Dolphin Emulator"
+summary = "Nintendo GameCube and Wii emulator with HD rendering support."
+categories = ["gaming", "emulation", "nintendo"]
+enabled = true
+
+[apps.pcsx2]
+flatpak_id = "net.pcsx2.PCSX2"
+name = "PCSX2"
+summary = "PlayStation 2 emulator with enhanced graphics and controller support."
+categories = ["gaming", "emulation", "playstation"]
+enabled = true
+
+[apps.rpcs3]
+flatpak_id = "net.rpcs3.RPCS3"
+name = "RPCS3"
+summary = "Experimental PlayStation 3 emulator focused on performance and compatibility."
+categories = ["gaming", "emulation", "playstation"]
+enabled = true
+
+[apps.ppsspp]
+flatpak_id = "org.ppsspp.PPSSPP"
+name = "PPSSPP"
+summary = "Fast and portable PlayStation Portable emulator."
+categories = ["gaming", "emulation", "playstation", "portable"]
+enabled = true
+
+[apps.duckstation]
+flatpak_id = "org.duckstation.DuckStation"
+name = "DuckStation"
+summary = "Modern PlayStation 1 emulator with upscaling and accuracy improvements."
+categories = ["gaming", "emulation", "playstation"]
+enabled = true
+
+[apps.cemu]
+flatpak_id = "info.cemu.Cemu"
+name = "Cemu"
+summary = "Wii U emulator with advanced graphics enhancements and mod support."
+categories = ["gaming", "emulation", "nintendo"]
+enabled = true
+
+[apps.melonds]
+flatpak_id = "net.kuribo64.melonDS"
+name = "melonDS"
+summary = "Nintendo DS emulator focused on accuracy and local multiplayer support."
+categories = ["gaming", "emulation", "nintendo", "portable"]
+enabled = true
+
+[apps.xemu]
+flatpak_id = "app.xemu.xemu"
+name = "xemu"
+summary = "Original Xbox emulator for running classic Xbox games on modern systems."
+categories = ["gaming", "emulation", "xbox"]
+enabled = true
+
+[apps.azahar]
+flatpak_id = "org.azahar_emu.Azahar"
+name = "Azahar"
+summary = "Nintendo 3DS emulator focused on performance and modern Linux support."
+categories = ["gaming", "emulation", "nintendo", "portable"]
+enabled = true
+
+[apps.snes9x]
+flatpak_id = "com.snes9x.Snes9x"
+name = "Snes9x"
+summary = "Super Nintendo Entertainment System (SNES) emulator with high compatibility and low latency."
+categories = ["gaming", "emulation", "nintendo", "retro"]
+enabled = true
+
+[apps.mgba]
+flatpak_id = "io.mgba.mGBA"
+name = "mGBA"
+summary = "Game Boy Advance emulator with accurate emulation, save states, and controller support."
+categories = ["gaming", "emulation", "nintendo", "portable", "retro"]
+enabled = true
+
+[apps.parallel_launcher]
+flatpak_id = "ca.parallel_launcher.ParallelLauncher"
+name = "Parallel Launcher"
+summary = "Modern Nintendo 64 emulator with an easy-to-use interface and strong compatibility."
+categories = ["gaming", "emulation", "nintendo", "retro"]
+enabled = true
+
+# =========================
+# Utilities / KDE Tools
+# =========================
+
+[apps.kate]
+flatpak_id = "org.kde.kate"
+name = "Kate"
+summary = "Powerful KDE text editor with syntax highlighting and development features."
+categories = ["utilities", "development", "coding", "editor"]
+enabled = true
+
+[apps.ark]
+flatpak_id = "org.kde.ark"
+name = "Ark"
+summary = "KDE archive manager for creating and extracting compressed files."
+categories = ["utilities", "archives", "file_management", "file"]
+enabled = true
+
+[apps.gwenview]
+flatpak_id = "org.kde.gwenview"
+name = "Gwenview"
+summary = "Fast and easy-to-use KDE image viewer."
+categories = ["utilities", "media", "images", "photo"]
+enabled = true
+
+[apps.filelight]
+flatpak_id = "org.kde.filelight"
+name = "Filelight"
+summary = "Visual disk usage analyzer for finding files and directories using storage space."
+categories = ["utilities", "storage", "file_management"]
+enabled = true
+
+[apps.kcalc]
+flatpak_id = "org.kde.kcalc"
+name = "KCalc"
+summary = "Scientific and general-purpose calculator from KDE."
+categories = ["utilities", "calculator", "education"]
+enabled = true
+
+[apps.kfind]
+flatpak_id = "org.kde.kfind"
+name = "KFind"
+summary = "KDE utility for searching for files and folders."
+categories = ["utilities", "file_management", "search"]
+enabled = true
+
+[apps.kcolorchooser]
+flatpak_id = "org.kde.kcolorchooser"
+name = "KColorChooser"
+summary = "Simple color selection and screen color picking utility."
+categories = ["utilities", "art", "design"]
+enabled = true
+
+[apps.kolourpaint]
+flatpak_id = "org.kde.kolourpaint"
+name = "KolourPaint"
+summary = "Simple painting and image editing application from KDE."
+categories = ["utilities", "media_creation", "art", "photo_editing"]
+enabled = true
+
+[apps.skanpage]
+flatpak_id = "org.kde.skanpage"
+name = "Skanpage"
+summary = "KDE application for scanning documents and saving multi-page files."
+categories = ["utilities", "documents", "scanning", "productivity"]
+enabled = true
+
+[apps.kleopatra]
+flatpak_id = "org.kde.kleopatra"
+name = "Kleopatra"
+summary = "Certificate manager and graphical interface for encryption and digital signatures."
+categories = ["utilities", "security", "privacy", "encryption"]
+enabled = true
+
+[apps.marble]
+flatpak_id = "org.kde.marble"
+name = "Marble"
+summary = "Virtual globe and geographic atlas from KDE."
+categories = ["utilities", "education", "geography", "maps"]
+enabled = true
+
+
+# =========================
+# Writing / Documents
+# =========================
+
+[apps.foliate]
+flatpak_id = "com.github.johnfactotum.Foliate"
+name = "Foliate"
+summary = "Clean and focused e-book reader for EPUB and other digital book formats."
+categories = ["productivity", "reading", "books", "documents"]
+enabled = true
+
+[apps.kile]
+flatpak_id = "org.kde.kile"
+name = "Kile"
+summary = "Feature-rich LaTeX editor for writing technical and academic documents."
+categories = ["productivity", "writing", "latex", "education"]
+enabled = true
+
+[apps.texstudio]
+flatpak_id = "org.texstudio.TeXstudio"
+name = "TeXstudio"
+summary = "Integrated writing environment for creating LaTeX documents."
+categories = ["productivity", "writing", "latex", "education"]
+enabled = true
+
+[apps.focuswriter]
+flatpak_id = "org.gottcode.FocusWriter"
+name = "FocusWriter"
+summary = "Distraction-free writing environment designed for focused long-form writing."
+categories = ["productivity", "writing", "editor"]
+enabled = true
+
+
+# =========================
+# Development Tools
+# =========================
+
+[apps.geany]
+flatpak_id = "org.geany.Geany"
+name = "Geany"
+summary = "Lightweight programming editor with IDE features and support for many languages."
+categories = ["development", "coding", "editor", "ide"]
+enabled = true
+
+[apps.neovim]
+flatpak_id = "io.neovim.nvim"
+name = "Neovim"
+summary = "Extensible terminal-based text editor designed for efficient development workflows."
+categories = ["development", "coding", "editor", "terminal"]
+enabled = true
+
+[apps.bottles]
+flatpak_id = "com.usebottles.bottles"
+name = "Bottles"
+summary = "Manage isolated Wine environments for running compatible Windows applications."
+categories = ["utilities", "windows", "compatibility", "gaming"]
+enabled = true
+
+
+# =========================
+# Science / Education
+# =========================
+
+[apps.kstars]
+flatpak_id = "org.kde.kstars"
+name = "KStars"
+summary = "Desktop planetarium for exploring stars, planets, constellations, and the night sky."
+categories = ["education", "science", "astronomy"]
+enabled = true
+
+[apps.kalzium]
+flatpak_id = "org.kde.kalzium"
+name = "Kalzium"
+summary = "Interactive periodic table and chemistry learning application."
+categories = ["education", "science", "chemistry"]
+enabled = true
+
+[apps.kalgebra]
+flatpak_id = "org.kde.kalgebra"
+name = "KAlgebra"
+summary = "Mathematics application with graphing, calculations, and algebra tools."
+categories = ["education", "science", "math"]
+enabled = true
+
+[apps.kig]
+flatpak_id = "org.kde.kig"
+name = "Kig"
+summary = "Interactive geometry application for exploring mathematical constructions."
+categories = ["education", "science", "math", "geometry"]
+enabled = true
+
+[apps.ktouch]
+flatpak_id = "org.kde.ktouch"
+name = "KTouch"
+summary = "Typing tutor for learning and improving touch-typing skills."
+categories = ["education", "typing", "productivity"]
+enabled = true
+
+[apps.kturtle]
+flatpak_id = "org.kde.kturtle"
+name = "KTurtle"
+summary = "Educational programming environment designed to teach basic programming concepts."
+categories = ["education", "coding", "development"]
+enabled = true
+
+[apps.parley]
+flatpak_id = "org.kde.parley"
+name = "Parley"
+summary = "Vocabulary learning application for studying languages and other subjects."
+categories = ["education", "language", "study"]
+enabled = true
+
+[apps.artikulate]
+flatpak_id = "org.kde.artikulate"
+name = "Artikulate"
+summary = "Pronunciation trainer for practicing and improving foreign-language speaking skills."
+categories = ["education", "language", "study"]
+enabled = true
+
+[apps.minuet]
+flatpak_id = "org.kde.minuet"
+name = "Minuet"
+summary = "Music education application for practicing intervals, chords, scales, and rhythm."
+categories = ["education", "music", "audio"]
+enabled = true
+
+[apps.labplot]
+flatpak_id = "org.kde.labplot2"
+name = "LabPlot"
+summary = "Scientific data analysis and visualization application for creating plots and graphs."
+categories = ["education", "science", "data", "development"]
+enabled = true
+
+
+# =========================
+# Finance
+# =========================
+
+[apps.kmymoney]
+flatpak_id = "org.kde.kmymoney"
+name = "KMyMoney"
+summary = "Personal finance manager for tracking accounts, transactions, budgets, and investments."
+categories = ["productivity", "finance"]
+enabled = true
+
+
+# =========================
+# Focus / Everyday Utilities
+# =========================
+
+[apps.francis]
+flatpak_id = "org.kde.francis"
+name = "Francis"
+summary = "Pomodoro timer for focused work and regular breaks."
+categories = ["utilities", "productivity", "focus"]
+enabled = true
+
+[apps.kclock]
+flatpak_id = "org.kde.kclock"
+name = "KClock"
+summary = "Clock with alarms, timers, a stopwatch, and world time zones."
+categories = ["utilities", "productivity", "clock"]
+enabled = true
+
+[apps.kronometer]
+flatpak_id = "org.kde.kronometer"
+name = "Kronometer"
+summary = "Stopwatch with lap recording and saved timing sessions."
+categories = ["utilities", "productivity", "stopwatch"]
+enabled = true
+
+[apps.qalculate]
+flatpak_id = "io.github.Qalculate"
+name = "Qalculate!"
+summary = "Advanced calculator with symbolic mathematics, plotting, and unit conversions."
+categories = ["utilities", "calculator", "education", "math"]
+enabled = true
+
+[apps.kcharselect]
+flatpak_id = "org.kde.kcharselect"
+name = "KCharSelect"
+summary = "Find and copy special characters and Unicode symbols from installed fonts."
+categories = ["utilities", "writing", "characters"]
+enabled = true
+
+[apps.kruler]
+flatpak_id = "org.kde.kruler"
+name = "KRuler"
+summary = "On-screen ruler for measuring pixel distances."
+categories = ["utilities", "art", "design"]
+enabled = true
+
+
+# =========================
+# Education / Learning
+# =========================
+
+[apps.gcompris]
+flatpak_id = "org.kde.gcompris"
+name = "GCompris"
+summary = "Educational activities for children covering reading, arithmetic, science, and logic."
+categories = ["education", "gaming", "children", "learning"]
+enabled = true
+
+[apps.kbruch]
+flatpak_id = "org.kde.kbruch"
+name = "KBruch"
+summary = "Practice fractions, percentages, and arithmetic through interactive exercises."
+categories = ["education", "math", "study"]
+enabled = true
+
+[apps.kgeography]
+flatpak_id = "org.kde.kgeography"
+name = "KGeography"
+summary = "Learn geography with map, capital, and flag quizzes."
+categories = ["education", "geography", "maps", "study"]
+enabled = true
+
+# Supports contributed decks downloaded within the application.
+[apps.wordquiz]
+flatpak_id = "org.kde.kwordquiz"
+name = "WordQuiz"
+summary = "Create and study flashcards for vocabulary and other subjects."
+categories = ["education", "language", "study"]
+enabled = true
+
+
+# =========================
+# Standalone Games
+# =========================
+
+[apps.ksudoku]
+flatpak_id = "org.kde.ksudoku"
+name = "KSudoku"
+summary = "Sudoku puzzles with multiple board sizes and difficulty levels."
+categories = ["gaming", "puzzle", "logic"]
+enabled = true
+
+[apps.kmines]
+flatpak_id = "org.kde.kmines"
+name = "KMines"
+summary = "Classic Minesweeper puzzle game."
+categories = ["gaming", "puzzle", "logic"]
+enabled = true
+
+[apps.kpatience]
+flatpak_id = "org.kde.kpat"
+name = "KPatience"
+summary = "Collection of solitaire card games."
+categories = ["gaming", "cards", "solitaire"]
+enabled = true
+
+[apps.kmahjongg]
+flatpak_id = "org.kde.kmahjongg"
+name = "KMahjongg"
+summary = "Mahjong solitaire game with tile-matching puzzles."
+categories = ["gaming", "puzzle", "board_games"]
+enabled = true
+
+[apps.knetwalk]
+flatpak_id = "org.kde.knetwalk"
+name = "KNetWalk"
+summary = "Rotate network tiles to connect every terminal to the server."
+categories = ["gaming", "puzzle", "logic"]
+enabled = true
+
+[apps.katomic]
+flatpak_id = "org.kde.katomic"
+name = "KAtomic"
+summary = "Molecule-building logic puzzles inspired by Sokoban."
+categories = ["gaming", "puzzle", "education", "chemistry"]
+enabled = true
+
+[apps.kblocks]
+flatpak_id = "org.kde.kblocks"
+name = "KBlocks"
+summary = "Falling-block puzzle game where completed rows clear the board."
+categories = ["gaming", "puzzle", "arcade"]
+enabled = true
+
+[apps.kbreakout]
+flatpak_id = "org.kde.kbreakout"
+name = "KBreakOut"
+summary = "Breakout-style arcade game with a paddle, ball, and destructible bricks."
+categories = ["gaming", "arcade"]
+enabled = true
+
+[apps.kreversi]
+flatpak_id = "org.kde.kreversi"
+name = "KReversi"
+summary = "Reversi board game with computer opponents."
+categories = ["gaming", "board_games", "strategy"]
+enabled = true
+
+[apps.kfourinline]
+flatpak_id = "org.kde.kfourinline"
+name = "KFourInLine"
+summary = "Connect four pieces in a row to win this classic board game."
+categories = ["gaming", "board_games", "strategy"]
+enabled = true
+
+# Includes online multiplayer and downloadable tracks/karts.
+[apps.supertuxkart]
+flatpak_id = "net.supertuxkart.SuperTuxKart"
+name = "SuperTuxKart"
+summary = "Kart racing game with story mode, local races, and online multiplayer."
+categories = ["gaming", "racing", "arcade"]
+enabled = true
+
+
+# =========================
+# Additional Creative / Document Tools
+# =========================
+
+[apps.pdf_arranger]
+flatpak_id = "com.github.jeromerobert.pdfarranger"
+name = "PDF Arranger"
+summary = "Merge, split, crop, rotate, and reorder pages in PDF documents."
+categories = ["utilities", "productivity", "pdf", "documents"]
+enabled = true
+
+[apps.librecad]
+flatpak_id = "org.librecad.librecad"
+name = "LibreCAD"
+summary = "2D CAD application for technical drawings, designs, and floor plans."
+categories = ["development", "media", "media_creation", "cad", "engineering"]
+enabled = true
+
+[apps.pencil2d]
+flatpak_id = "org.pencil2d.Pencil2D"
+name = "Pencil2D"
+summary = "Create hand-drawn 2D animations using bitmap and vector graphics."
+categories = ["media", "media_creation", "art", "animation"]
+enabled = true
+
+[apps.hydrogen]
+flatpak_id = "org.hydrogenmusic.Hydrogen"
+name = "Hydrogen"
+summary = "Drum machine and sequencer for creating rhythm patterns and songs."
+categories = ["music", "media", "media_creation", "audio", "drums"]
+enabled = true
+
+[apps.tux_paint]
+flatpak_id = "org.tuxpaint.Tuxpaint"
+name = "Tux Paint"
+summary = "Drawing application for children with stamps, brushes, and creative effects."
+categories = ["education", "media", "media_creation", "art", "children"]
+enabled = true
+
+# Markdown documents use a live HTML preview; review remote image handling.
+[apps.ghostwriter]
+flatpak_id = "org.kde.ghostwriter"
+name = "ghostwriter"
+summary = "Focused Markdown editor with live preview and writing statistics."
+categories = ["utilities", "productivity", "writing", "editor"]
+enabled = true
+
+
+# =========================
+# Additional Coding Tools
+# =========================
+
+[apps.qt_creator]
+flatpak_id = "io.qt.QtCreator"
+name = "Qt Creator"
+summary = "Integrated development environment for building and debugging Qt applications."
+categories = ["coding", "development", "ide", "qt"]
+enabled = true
+
+[apps.qt_widgets_designer]
+flatpak_id = "io.qt.Designer"
+name = "Qt Widgets Designer"
+summary = "Visually design and edit Qt Widgets user interfaces using .ui files."
+categories = ["coding", "development", "gui_design", "qt"]
+enabled = true
+
+[apps.meld]
+flatpak_id = "org.gnome.meld"
+name = "Meld"
+summary = "Compare files and folders, review code changes, and resolve merge conflicts."
+categories = ["coding", "development", "diff", "merge"]
+enabled = true
+
+[apps.db_browser_sqlite]
+flatpak_id = "org.sqlitebrowser.sqlitebrowser"
+name = "DB Browser for SQLite"
+summary = "Create and edit SQLite databases, browse tables, and run SQL queries."
+categories = ["coding", "development", "database", "sql"]
+enabled = true
+
+[apps.okteta]
+flatpak_id = "org.kde.okteta"
+name = "Okteta"
+summary = "Hex editor for inspecting and editing binary files and raw data."
+categories = ["coding", "development", "hex_editor", "binary"]
+enabled = true
+
+[apps.umbrello]
+flatpak_id = "org.kde.umbrello"
+name = "Umbrello"
+summary = "Create UML diagrams to plan software systems and generate code."
+categories = ["coding", "development", "uml", "diagrams"]
+enabled = true

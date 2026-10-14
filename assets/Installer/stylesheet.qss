@@ -1,0 +1,17 @@
+QWidget { color: #eef5ff; background-color: #172338; }
+QLabel { background: transparent; }
+QLabel#title { color: #78c8ff; }
+QAbstractScrollArea, QLineEdit, QComboBox, QSpinBox {
+    background: #111c2e; color: #eef5ff; border: 1px solid #345270;
+    border-radius: 6px; padding: 6px; selection-background-color: #295a82;
+}
+QPushButton { background: #284c70; color: #eef5ff; border: 1px solid #38688f;
+    border-radius: 6px; padding: 8px 16px; }
+QPushButton:hover { background: #35638d; }
+QPushButton:disabled { color: #8a9bb1; background: #22334b; }
+QProgressBar { background: #111c2e; color: #eef5ff; border: 1px solid #345270;
+    border-radius: 6px; text-align: center; }
+QProgressBar::chunk { background: #67bfff; }
+QGroupBox { border: 1px solid #345270; border-radius: 8px; margin-top: 14px; padding-top: 14px; }
+QGroupBox::title { color: #78c8ff; }
+QToolTip { background: #1d304a; color: #eef5ff; border: 1px solid #67bfff; }

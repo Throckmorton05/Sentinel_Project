@@ -1,0 +1,45 @@
+Source: sentinel
+Section: admin
+Priority: optional
+Maintainer: Sentinel Project <noreply@sentinel.invalid>
+Build-Depends: debhelper-compat (= 13), dpkg-dev, python3.14 (>= 3.14.2), python3.14-venv, python3.14-dev, binutils, patchelf, gcc
+Standards-Version: 4.7.0
+Rules-Requires-Root: no
+Homepage: https://github.com/Throckmorton05/Sentinel_Project
+
+Package: sentinel-core
+Architecture: amd64
+Depends: ${misc:Depends}, ${shlibs:Depends}, sentinel-assets (= ${binary:Version}), python3:any, python3.14 (>= 3.14.2), python3.14 (<< 3.15), adduser, passwd, systemd, dbus, apparmor, apparmor-utils, acl, udev, polkitd, openssl, flatpak, pipx, ca-certificates, libpam0g, libgcc-s1, libstdc++6, libglib2.0-0t64, libgl1, libegl1, libxkbcommon0, libxcb-cursor0, libxcb-xinerama0
+Description: Sentinel protected runtime and desktop clients
+ Root-owned Python runtime, privileged backend, command-line client,
+ Portal, App Store and local inference services. The protected desktop
+ account is selected explicitly with sentinel-setup after installation.
+ AdGuard Home and its local control credentials require separate setup.
+
+Package: sentinel-assets
+Architecture: all
+Depends: ${misc:Depends}
+Description: Sentinel public assets and initial policy data
+ Public signed Chrome extensions, branding, approved application catalogs,
+ and initial DNS data. Private signing keys and personal state are excluded.
+
+Package: sentinel-models
+Architecture: all
+Depends: ${misc:Depends}
+Description: Sentinel ONNX classifier models
+ OpenNSFW2, drawn/photo routing and Hentai classifier files for local
+ CPU inference. NudeNet's detector is supplied by the protected runtime.
+
+Package: sentinel-desktop
+Architecture: amd64
+Depends: ${misc:Depends}, sentinel-core (= ${binary:Version}), kwin-wayland, plasma-workspace, qdbus-qt6, libkf6config-bin, python3-pyqt6, python3-pyqt6.qtquick, qml6-module-qtqml-models, qml6-module-qtqml-workerscript, qml6-module-qtquick, qml6-module-qtquick-window, qml6-module-qtquick-layouts, qml6-module-org-kde-layershell, qt6-wayland, desktop-file-utils
+Description: Sentinel KDE Plasma Wayland integration
+ Desktop launchers, system-installed KWin window bridge, and KWin
+ screenshot authorization for the dedicated monitor interpreter.
+
+Package: sentinel
+Architecture: amd64
+Depends: ${misc:Depends}, sentinel-core (= ${binary:Version}), sentinel-assets (= ${binary:Version}), sentinel-models (= ${binary:Version}), sentinel-desktop (= ${binary:Version})
+Description: Complete Sentinel desktop package set
+ Installs the Sentinel runtime, public assets, models and KDE integration.
+ Google Chrome Stable, AdGuard Home and DNS routing are external prerequisites.

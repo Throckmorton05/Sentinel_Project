@@ -1,0 +1,25 @@
+{
+  "manifest_version": 3,
+  "name": "Sentinel Safe Steam",
+  "version": "0.2.0",
+  "description": "Enforces daemon-approved Sentinel Steam Store restrictions.",
+  "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA6/5yl0R2szSsdes5nVNlR3lafn89Kr79cEVjjR1gdddH0VFEtb+UCArDCNZGwcb7G/jBE0L7EW6i6+iO+0axuUHoot+rWjQEb32jnONeM2ZbrTq/w+1oQN0yINogS4zYQc1OW89w09vH1DNeG2/BCcQHv7V0NFOReVrnCkCNUcWW1RPv7onKta80p2uTC7Q8B1XPtJGBx+slquU8Mn4AP8ItKGscbFsUAyC/6zH8M0zr+g9r636xZ7vAJREqML+guAQ+aT9i+C21BufMtmYaW+9936l+lmjCMZQYZ7bwNB5QWiMi61da0RXlY5PwaTgTZoa16kqDQ4W1fa6OGsaqVwIDAQAB",
+  "host_permissions": [
+    "http://127.0.0.1:8765/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "https://store.steampowered.com/*"
+      ],
+      "js": [
+        "policy.js",
+        "content.js"
+      ],
+      "run_at": "document_idle"
+    }
+  ],
+  "background": {
+    "service_worker": "background.js"
+  }
+}

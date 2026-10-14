@@ -1,0 +1,9 @@
+[apps.kate]   
+name = "Kate" 
+type = "native" 
+executable = "kate"
+
+[apps.opera]
+name = "Opera"
+type = "flatpak"
+flatpak_id = "com.opera.Opera"

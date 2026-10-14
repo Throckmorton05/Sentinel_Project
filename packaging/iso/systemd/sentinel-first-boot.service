@@ -1,0 +1,15 @@
+[Unit]
+Description=Verify Sentinel protection before desktop login
+ConditionPathExists=/etc/sentinel/iso-installed.json
+Requires=sentinel-dns.service sentinel-dns-firewall.service
+After=sentinel-dns.service sentinel-dns-firewall.service
+Before=sentineld.service sddm.service
+
+[Service]
+Type=oneshot
+ExecStart=/usr/lib/sentinel-iso/first_boot
+RemainAfterExit=yes
+TimeoutStartSec=240
+
+[Install]
+WantedBy=multi-user.target
