@@ -7,13 +7,16 @@ neutral placeholders, while installed assets use their packaged system paths.
 
 ## Public identity and contact
 
-Python author metadata omits a personal email. Debian requires a syntactically
-valid maintainer address, so current packaging uses **noreply@sentinel.invalid**
-as an explicitly non-deliverable placeholder. Choose an actual public project
-contact or the exact no-reply address shown in the maintainer's GitHub email
-settings before an official release. Update `debian/control`, changelog trailer
-addresses, and the generated Maintainer field in `packaging/iso/platform_package.py`.
-Use a public project address for future changelog entries as well.
+Python author metadata omits a personal email. Debian maintainer fields and
+changelog trailers use the maintainer's GitHub-provided public no-reply address:
+`283042319+Throckmorton05@users.noreply.github.com`. It is not a project support
+inbox; use the repository's Issues page for bug reports. This address still
+identifies the GitHub account, while keeping its private mailbox out of artifacts.
+
+If a public project domain/contact is adopted later, update `debian/control`,
+changelog trailer addresses, and the generated Maintainer field in
+`packaging/iso/platform_package.py`. Use the chosen public identity for future
+changelog entries as well.
 
 The configured GitHub owner, repository URL, and signed APT channel remain public
 identifiers. Removing real names from files does not unlink an existing GitHub

@@ -1,7 +1,7 @@
 Source: sentinel
 Section: admin
 Priority: optional
-Maintainer: Sentinel Project <noreply@sentinel.invalid>
+Maintainer: Sentinel Project <283042319+Throckmorton05@users.noreply.github.com>
 Build-Depends: debhelper-compat (= 13), dpkg-dev, python3.14 (>= 3.14.2), python3.14-venv, python3.14-dev, binutils, patchelf, gcc
 Standards-Version: 4.7.0
 Rules-Requires-Root: no

@@ -126,7 +126,7 @@ def build_platform(project, kit, debs, output):
              'Source: https://github.com/Throckmorton05/Sentinel_Project\n'
              'AdGuard Home and Starship retain the bundled upstream licenses.\n')
         text('DEBIAN/control', f'Package: sentinel-platform\nVersion: {version}\nArchitecture: amd64\n'
-             'Maintainer: Sentinel Project <noreply@sentinel.invalid>\nSection: admin\nPriority: optional\n'
+             'Maintainer: Sentinel Project <283042319+Throckmorton05@users.noreply.github.com>\nSection: admin\nPriority: optional\n'
              f'Depends: sentinel (= {version}), python3 (>= 3.11), python3-yaml, gnupg, nftables, apache2-utils, sddm, fontconfig, plymouth-theme-spinner, initramfs-tools, xdg-user-dirs\n'
              'Description: Sentinel installed distribution integration and update trust\n'
              ' Versioned ISO helpers, protected startup, DNS service, desktop assets\n'
