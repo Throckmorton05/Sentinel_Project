@@ -7,10 +7,10 @@ from pathlib import Path
 import shlex
 import sys
 
-from PyQt6.QtCore import QProcess, Qt
+from PyQt6.QtCore import QProcess, QProcessEnvironment, QTimer, Qt
 from PyQt6.QtGui import QIcon
 from PyQt6.QtWidgets import (
-    QApplication, QFrame, QHBoxLayout, QLabel, QPushButton,
+    QApplication, QFrame, QHBoxLayout, QLabel, QPushButton, QScrollArea,
     QVBoxLayout, QWidget,
 )
 
@@ -34,12 +34,20 @@ class Welcome(QWidget):
         super().__init__()
         self.installer_exec = installer_exec
         self.process = None
+        self.network_process = None
         self.allow_close = False
         self.setWindowTitle('Try or install Sentinel Linux')
+        self.setWindowFlag(Qt.WindowType.FramelessWindowHint, True)
         self.setStyleSheet(STYLE)
         logo = QIcon('/usr/share/calamares/branding/sentinel/logo.svg')
         self.setWindowIcon(logo)
-        outer = QVBoxLayout(self)
+        # Small laptop screens and display scaling must not hide the buttons.
+        scroll = QScrollArea(self); scroll.setWidgetResizable(True)
+        scroll.setFrameShape(QFrame.Shape.NoFrame)
+        body = QWidget(); scroll.setWidget(body)
+        frame = QVBoxLayout(self); frame.setContentsMargins(0, 0, 0, 0)
+        frame.addWidget(scroll)
+        outer = QVBoxLayout(body)
         outer.addStretch()
         card = QFrame(); card.setObjectName('card'); card.setMaximumWidth(760)
         content = QVBoxLayout(card); content.setContentsMargins(42, 36, 42, 36)
@@ -57,14 +65,68 @@ class Welcome(QWidget):
         self.install_button = QPushButton('Install Sentinel Linux'); self.install_button.setObjectName('install')
         self.install_button.clicked.connect(self.install)
         choices.addWidget(self.try_button); choices.addWidget(self.install_button); content.addLayout(choices)
+        self.network_button = QPushButton('Connect to Wi-Fi')
+        self.network_button.clicked.connect(self.open_network)
+        content.addWidget(self.network_button)
+        self.network_status = QLabel('Checking network connection…')
+        self.network_status.setAlignment(Qt.AlignmentFlag.AlignCenter)
+        content.addWidget(self.network_status)
+        offline = QLabel('Internet is optional for installation. Extra downloads need a connection.')
+        offline.setWordWrap(True); offline.setAlignment(Qt.AlignmentFlag.AlignCenter)
+        content.addWidget(offline)
         self.status = QLabel(''); self.status.setWordWrap(True)
         self.status.setAlignment(Qt.AlignmentFlag.AlignCenter); content.addWidget(self.status)
         outer.addWidget(card, alignment=Qt.AlignmentFlag.AlignHCenter)
         outer.addStretch()
+        self.network_check = QProcess(self)
+        environment = QProcessEnvironment.systemEnvironment()
+        environment.insert('LC_ALL', 'C')
+        self.network_check.setProcessEnvironment(environment)
+        self.network_check.finished.connect(self.network_checked)
+        self.network_check.errorOccurred.connect(lambda _: self.network_status.setText('Network status unavailable'))
+        self.network_timeout = QTimer(self); self.network_timeout.setSingleShot(True)
+        self.network_timeout.timeout.connect(self.network_check.kill)
+        self.network_timer = QTimer(self); self.network_timer.timeout.connect(self.check_network)
+        self.network_timer.start(5000); self.check_network()
+
+    def check_network(self):
+        if self.network_check.state() == QProcess.ProcessState.NotRunning:
+            self.network_check.start('/usr/bin/nmcli', ['-t', '-f', 'STATE', 'general'])
+            self.network_timeout.start(3000)
+
+    def network_checked(self, code, status):
+        self.network_timeout.stop()
+        state = bytes(self.network_check.readAllStandardOutput()).decode(errors='replace').strip()
+        text = {'connected': 'Connected — NetworkManager reports internet access',
+                'connected (local only)': 'Connected to a local network — internet unverified',
+                'connected (site only)': 'Connected to a network — internet limited',
+                'connecting': 'Connecting…', 'disconnected': 'Not connected',
+                'asleep': 'Networking is disabled'}.get(state, 'Internet access unverified')
+        self.network_status.setText(text if code == 0 else 'Network status unavailable')
+
+    def open_network(self):
+        if self.network_process is not None:
+            return
+        process = QProcess(self); self.network_process = process
+        process.errorOccurred.connect(lambda _: self.network_closed(True))
+        process.finished.connect(lambda code, status: self.network_closed(code != 0))
+        # Plasma has already started, including its NetworkManager secret agent.
+        process.start('/usr/bin/plasmawindowed', ['org.kde.plasma.networkmanagement'])
+        self.network_button.setEnabled(False)
+        self.showMinimized()  # The panel and network dialog remain accessible.
+
+    def network_closed(self, failed=False):
+        process, self.network_process = self.network_process, None
+        if process is None:
+            return
+        process.deleteLater(); self.network_button.setEnabled(True)
+        self.showFullScreen(); self.raise_(); self.activateWindow(); self.check_network()
+        if failed:
+            self.status.setText('Choose Try Sentinel Linux, then use the desktop network icon to connect to Wi-Fi.')
 
     def try_desktop(self):
         self.allow_close = True
-        QApplication.instance().quit()  # The retained live wrapper starts Plasma.
+        QApplication.instance().quit()  # Plasma is already running underneath.
 
     def install(self):
         if self.process is not None:
@@ -79,6 +141,7 @@ class Welcome(QWidget):
             access.start('/usr/bin/xhost', ['si:localuser:root'])
             access.waitForFinished(5000)
         process = QProcess(self); self.process = process
+        process.started.connect(self.showMinimized)
         process.errorOccurred.connect(self.failed)
         process.finished.connect(self.finished)
         argv = shlex.split(self.installer_exec)
@@ -89,6 +152,7 @@ class Welcome(QWidget):
         self.try_button.setEnabled(True); self.install_button.setEnabled(True)
         if self.process is not None:
             self.process.deleteLater(); self.process = None
+        self.showFullScreen(); self.raise_(); self.activateWindow()
 
     def finished(self, code, status):
         if code == 0 and status == QProcess.ExitStatus.NormalExit:
@@ -106,7 +170,7 @@ class Welcome(QWidget):
 def main():
     if ('boot=casper' not in Path('/proc/cmdline').read_text().split()
             or Path('/etc/sentinel/iso-installed.json').exists()):
-        raise SystemExit('The Sentinel welcome screen is only available on the live installer ISO.')
+        return 0  # The autostart file is harmless after installation.
     configuration = Path('/usr/lib/sentinel-iso/live-welcome.json')
     info = configuration.lstat()
     if configuration.is_symlink() or info.st_uid != 0 or info.st_mode & 0o022:
@@ -117,14 +181,10 @@ def main():
     app = QApplication(sys.argv)
     app.setQuitOnLastWindowClosed(False)
     welcome = Welcome(command)
-    backgrounds = []
-    for screen in app.screens():
-        if screen == app.primaryScreen():
-            welcome.setGeometry(screen.geometry()); welcome.showFullScreen()
-        else:
-            background = QWidget(); background.setStyleSheet('background: #0b101b;')
-            background.setGeometry(screen.geometry()); background.showFullScreen()
-            backgrounds.append(background)
+    screen = app.primaryScreen()
+    if screen is not None:
+        welcome.setGeometry(screen.geometry())
+    welcome.showFullScreen()  # Plasma keeps running behind the live welcome.
     return app.exec()
 
 

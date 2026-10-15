@@ -9,7 +9,7 @@ import shutil
 import subprocess
 
 from common import WALLPAPERS, RESOLUTIONS, kwin_defaults, run, write
-from apt_sources import disable_media_source, media_cleanup_config
+from apt_sources import disable_media_source, media_cleanup_config, stage_installer_media_source
 from desktop_defaults import APPLICATIONS, launcher_entry
 from installer_branding import install_branding
 from image_cleanup import purge_stock_packages, remove_duplicate_profile
@@ -267,7 +267,13 @@ def configure_image(kit):
                 raise ValueError(f'Unexpected personal/provisioned state in image: {name}')
         write('/usr/lib/sentinel-iso/image-built.json', json.dumps({'version': 1, 'source': 'Cubic',
               'package_version': json.loads((kit / 'kit-manifest.json').read_text())['package_version']}) + '\n')
+        # Keep networking additions separate from the customizable app list.
+        run('apt-get', 'install', '-y', '--no-remove', 'network-manager', 'plasma-nm')
         run('apt-get', 'clean')
+        # Calamares copies this path even when the installer runs offline.
+        # Reintroduce it only after build-time APT work, with Enabled: no.
+        stage_installer_media_source()
+        run('systemctl', 'enable', 'NetworkManager.service')
     finally:
         if old_policy is None:
             policy_path.unlink(missing_ok=True)

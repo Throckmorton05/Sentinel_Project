@@ -65,7 +65,10 @@ class LiveBrandingTests(unittest.TestCase):
             command = 'sudo /usr/bin/calamares-launch-normal'
             launcher.write_text('[Desktop Entry]\nExec=' + command + '\n')
             live_branding.install_live_branding(PROJECT, root)
-            self.assertEqual(session.read_text(), original.replace('kubuntu-installer-prompt;', '/usr/bin/sentinel-live-welcome;'))
+            self.assertNotIn('kwin_wayland --xwayland', session.read_text())
+            self.assertIn('# Portal fixes remain here\nstartplasma-wayland', session.read_text())
+            self.assertIn('Exec=/usr/bin/sentinel-live-welcome',
+                (root / 'etc/xdg/autostart/sentinel-live-welcome.desktop').read_text())
             import json
             config = json.loads((root / 'usr/lib/sentinel-iso/live-welcome.json').read_text())
             self.assertEqual(config['installer_exec'], command)

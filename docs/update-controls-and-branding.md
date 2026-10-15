@@ -1,5 +1,11 @@
 # Sentinel update controls and image branding — 0.1.0-10
 
+The [Cubic live repair](cubic-live-repair.md) supersedes the original welcome
+startup below: Plasma now starts first, then the live welcome opens through KDE
+autostart. Try closes that window; it no longer depends on a temporary compositor
+exiting. The welcome is full-screen without a title bar, with Wi-Fi access and
+NetworkManager status. Plasma can briefly appear while the autostart app loads.
+
 This revision adds `sen update-sen`, a separate **Update Sentinel** control in
 Portal → System & desktop → Maintenance, and the requested ISO cleanup.
 

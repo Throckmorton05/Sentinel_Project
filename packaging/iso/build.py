@@ -28,6 +28,9 @@ def main():
     verify = commands.add_parser('verify', help='read-only: verify a prepared kit')
     verify.add_argument('kit', type=Path)
     commands.add_parser('image', help='root inside Cubic: configure the extracted image')
+    commands.add_parser('repair-live', help='root inside Cubic: repair an existing Sentinel live image, without reinstalling packages')
+    boot = commands.add_parser('boot-branding', help='host: brand menu titles in Cubic custom-disk')
+    boot.add_argument('custom_disk', type=Path)
     args = parser.parse_args()
     if args.command == 'prepare':
         from prepare import prepare as prepare_kit
@@ -44,6 +47,15 @@ def main():
         verify_kit(project)
         from image import configure_image
         configure_image(project)
+    elif args.command == 'repair-live':
+        require_image_environment()
+        if not Path('/usr/lib/sentinel-iso/image-built.json').is_file():
+            raise ValueError('Repair requires an existing Sentinel image. Configure it with a COMPLETE kit first.')
+        from live_repair import apply_live_fixes
+        apply_live_fixes(project)
+    elif args.command == 'boot-branding':
+        from boot_branding import brand_boot_tree
+        brand_boot_tree(args.custom_disk)
 
 
 if __name__ == '__main__':

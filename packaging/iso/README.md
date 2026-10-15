@@ -1,5 +1,12 @@
 # Sentinel test ISO with Cubic
 
+For the Wi-Fi welcome, Try-desktop black screen, missing `cdrom.sources`, and
+USB GRUB titles, see [the Cubic repair guide](../../docs/cubic-live-repair.md).
+`build.sh repair-live` updates an already configured Cubic image without DEB
+reinstallation. `build.sh boot-branding PATH/custom-disk` runs on the host.
+The welcome runs full-screen without a title bar over Plasma. Wi-Fi and installer
+windows temporarily minimize it; Try dismisses it to the running desktop.
+
 For the connected development PC → packages → platform → Cubic workflow, start
 with [Development PC to ISO](../../docs/development-to-iso.md).
 For signed updates of already installed systems, see
@@ -84,8 +91,12 @@ Before APT runs, the script also disables the known `file:///cdrom` media source
 when present, preserving its contents as `cdrom.sources.disabled`. It checks
 that this file contains only the media URI and refuses to disable mixed online
 repositories. Kubuntu's late `rmcdrom` job is replaced with target-chroot cleanup
-using `rm -f` for the active and disabled media-source files, so an already absent
-file cannot abort installation. Online repository signature checks stay enabled.
+using `rm -f` for the active and disabled media-source files. At the end of image
+setup the media source is staged at its original path with `Enabled: no` in every
+stanza: Calamares can copy it without enabling the unavailable repository.
+Rebuilding preserves the original backup and embedded signing key. If the stock
+image has no media source, a complete disabled deb822 stanza is created.
+Online repository signature checks stay enabled.
 
 Use Cubic's file-copy dialog to copy `sentinel-iso-kit.tar.gz` from the host into
 `/root` in the virtual terminal. Then run **inside Cubic**:
